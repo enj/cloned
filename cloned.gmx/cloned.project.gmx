@@ -21,7 +21,6 @@
   <objects name="objects">
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
-    <object>objects\obj_computer</object>
     <objects name="Fighters">
       <object>objects\obj_fighter</object>
     </objects>

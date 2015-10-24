@@ -26,6 +26,21 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+// Health Bar Location
+hb_x1 = 10;
+hb_x2 = 10+hp*4;
+hbo_x1 = 10;
+hbo_x2 = 410;
+
+player_speed = 8;
+
+// Controller setup
+use_controller = false;
+ctrl_right = vk_right;
+ctrl_left  = vk_left;
+ctrl_jump  = vk_up;
+ctrl_punch = vk_control;
+ctrl_kick  = vk_space;
 </string>
           </argument>
         </arguments>
@@ -133,94 +148,19 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+// Update health bar size
+hb_x2 = 10+hp*4;
+
 var did_hit = (place_meeting(x+hspeed,y,obj_fighter) || place_meeting(x,y+vspeed,obj_fighter));
 if(did_hit) {
     if(punching==true) {
-        obj_computer.hp-=5;
+        obj_player2.hp-=5;
     }
     if(kicking==true) {
-        obj_computer.hp-=7;
+        obj_player2.hp-=7;
     }
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000001000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>8</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="37">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000100000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>8</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -252,87 +192,6 @@ if(kicking==true) {
     sprite_index=spr_jibbers_standing;
     image_index = -1;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hb_x1 = 10;
-hb_y1 = 10;
-hb_x2 = 10+hp*4;
-hb_y2 = 30;
-hbo_x1 = 10;
-hbo_y1 = 10;
-hbo_x2 = 410;
-hbo_y2 = 30;
-event_inherited();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>punching = true;
-sprite_index=spr_jibbers_punch;
-image_index = -1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="17">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>kicking = true;
-sprite_index=spr_jibbers_kick;
-image_index = -1;
 </string>
           </argument>
         </arguments>
