@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\mus_jibbers</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Jibbers">
       <sprite>sprites\spr_jibbers_standing</sprite>
@@ -24,6 +26,7 @@
     <objects name="Fighters">
       <object>objects\obj_fighter</object>
     </objects>
+    <object>objects\obj_music</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_jibbers</room>

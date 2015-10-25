@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+// Set opponent
+opponent = obj_player1;
+
 hb_x1 = 1014-hp*4;
 hb_x2 = 1014;
 hbo_x1 = 614;
@@ -100,7 +103,7 @@ ctrl_kick  = ord('O');
           </argument>
           <argument>
             <kind>4</kind>
-            <string>1</string>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

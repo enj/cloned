@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+// Set opponent
+opponent = obj_player2;
+
 // Health Bar Location
 hb_x1 = 10;
 hb_x2 = 10+hp*4;
