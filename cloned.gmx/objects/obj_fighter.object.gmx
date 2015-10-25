@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>kicking=false;
 punching=false;
-hp=100;
 hb_y1 = 10;
 hb_y2 = 30;
 hbo_y1 = 10;
@@ -35,6 +34,16 @@ hbo_y2 = 30;
 player_speed=0;
 opponent = self;
 facing_right = true;
+
+// Sprite settings
+sprite_standing = spr_jibbers_standing;
+sprite_punching = spr_jibbers_punch;
+sprite_kicking  = spr_jibbers_kick;
+sprite_walking  = spr_jibbers_walking;
+
+// Character parameters
+player_speed = 0;
+hp=100;
 </string>
           </argument>
         </arguments>
@@ -58,9 +67,7 @@ facing_right = true;
           <argument>
             <kind>1</kind>
             <string>// Controls
-if keyboard_check(vk_nokey) {
-    hspeed = 0;
-}
+hspeed = 0;
 if(keyboard_check(ctrl_left)) {
     hspeed=-1*player_speed;
 }
@@ -69,12 +76,12 @@ if(keyboard_check(ctrl_right)) {
 }
 if(keyboard_check_pressed(ctrl_punch)) {
     punching = true;
-    sprite_index=spr_jibbers_punch;
+    sprite_index=sprite_punching;
     image_index = -1;
 }
 if(keyboard_check_pressed(ctrl_kick)) {
     kicking = true;
-    sprite_index=spr_jibbers_kick;
+    sprite_index=sprite_kicking;
     image_index = -1;
 }
 
@@ -96,7 +103,50 @@ if((facing_right == (opponent.x &lt; self.x))) {
     facing_right = !facing_right;
 }
 
+// Check for hit
+var did_hit = (place_meeting(x+hspeed,y,obj_fighter) || place_meeting(x,y+vspeed,obj_fighter));
+if(did_hit) {
+    if(punching==true) {
+        opponent.hp-=5;
+    }
+    if(kicking==true) {
+        opponent.hp-=7;
+    }
+}
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(punching==true) {
+    punching = false;
+    sprite_index=sprite_standing;
+    image_index = -1;
+}
+if(kicking==true) {
+    kicking = false;
+    sprite_index=sprite_standing;
+    image_index = -1;
+}
 </string>
           </argument>
         </arguments>

@@ -22,8 +22,8 @@
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Fighters">
-      <object>objects\obj_player2</object>
       <object>objects\obj_player1</object>
+      <object>objects\obj_player2</object>
       <object>objects\obj_fighter</object>
     </objects>
     <object>objects\obj_music</object>

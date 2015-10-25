@@ -26,6 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+// Sprite and Character Parameters (set by chosen fighter)
+sprite_standing = spr_jibbers_standing;
+sprite_punching = spr_jibbers_punch;
+sprite_kicking  = spr_jibbers_kick;
+sprite_walking  = spr_jibbers_walking;
+sprite_index = sprite_standing;
+image_xscale=3;
+image_yscale=3;
+player_speed = 8;
+
 // Set opponent
 opponent = obj_player1;
 
@@ -33,8 +43,6 @@ hb_x1 = 1014-hp*4;
 hb_x2 = 1014;
 hbo_x1 = 614;
 hbo_x2 = 1014;
-
-player_speed = 8;
 
 // Controller setup
 use_controller = false;
@@ -44,66 +52,6 @@ ctrl_jump  = ord('W');
 ctrl_punch = ord('P');
 ctrl_kick  = ord('O');
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_jibbers_standing</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>542</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_transform</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -206,49 +154,7 @@ alarm[0]=30;
             <kind>1</kind>
             <string>event_inherited();
 hb_x1 = 1014-hp*4;
-var did_hit = (place_meeting(x+hspeed,y,obj_fighter) || place_meeting(x,y+vspeed,obj_fighter));
-if(did_hit) {
-    if(punching==true) {
-        obj_player1.hp-=5;
-    }
-    if(kicking==true) {
-        obj_player1.hp-=7;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(punching==true) {
-    keyboard_key_release(ctrl_punch);
-    punching = false;
-    sprite_index=spr_jibbers_standing;
-    image_index = -1;
-}
-if(kicking==true) {
-    keyboard_key_release(ctrl_kick);
-    kicking = false;
-    sprite_index=spr_jibbers_standing;
-    image_index = -1;
-}
+
 </string>
           </argument>
         </arguments>
