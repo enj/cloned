@@ -21,9 +21,9 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_player1</object>
-    <object>objects\obj_player2</object>
     <objects name="Fighters">
+      <object>objects\obj_player2</object>
+      <object>objects\obj_player1</object>
       <object>objects\obj_fighter</object>
     </objects>
     <object>objects\obj_music</object>
@@ -31,6 +31,9 @@
   <rooms name="rooms">
     <room>rooms\rm_jibbers</room>
     <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_wukong</room>
+    <room>rooms\rm_pxndx</room>
+    <room>rooms\rm_bahamut</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
