@@ -46,12 +46,16 @@ hbo_x1 = 614;
 hbo_x2 = 1014;
 
 // Controller setup
-use_controller = false;
-ctrl_right = ord('D');
-ctrl_left  = ord('A');
-ctrl_jump  = ord('W');
-ctrl_punch = ord('P');
-ctrl_kick  = ord('O');
+use_controller = true;
+key_right = ord('D');
+key_left  = ord('A');
+key_jump  = ord('W');
+key_punch = ord('P');
+key_kick  = ord('O');
+
+// Pick Controller
+script_execute(script_set_controller, self);
+
 </string>
           </argument>
         </arguments>
@@ -125,9 +129,9 @@ ctrl_kick  = ord('O');
             <string>action = choose("punch","kick", " ", " ");
 
 if(action=="punch") {
-    keyboard_key_press(ctrl_punch);
+    keyboard_key_press(key_punch);
 } else if(action=="kick") {
-    keyboard_key_press(ctrl_kick);
+    keyboard_key_press(key_kick);
 }
 
 alarm[0]=30;

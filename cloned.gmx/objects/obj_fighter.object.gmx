@@ -35,6 +35,16 @@ player_speed=0;
 opponent = self;
 facing_right = true;
 
+// Controller Settings
+use_controller=false;
+pad_right = gp_axislh;
+pad_left  = gp_axislh;
+pad_jump  = gp_axislv;
+pad_punch = gp_face3;
+pad_kick  = gp_face1;
+pad_block = gp_face4;
+
+
 // Sprite settings
 sprite_standing = spr_jibbers_standing;
 sprite_punching = spr_jibbers_punch;
@@ -68,18 +78,18 @@ hp=100;
             <kind>1</kind>
             <string>// Controls
 hspeed = 0;
-if(keyboard_check(ctrl_left)) {
+if(keyboard_check(key_left) || gamepad_axis_value(controller_num, pad_left)&lt;-.8) {
     hspeed=-1*player_speed;
 }
-if(keyboard_check(ctrl_right)) {
+if(keyboard_check(key_right) || gamepad_axis_value(controller_num, pad_right)&gt;.8) {
     hspeed=player_speed;
 }
-if(keyboard_check_pressed(ctrl_punch)) {
+if(keyboard_check_pressed(key_punch) || gamepad_button_check_pressed(controller_num, pad_punch)) {
     punching = true;
     sprite_index=sprite_punching;
     depth=-1000;
 }
-if(keyboard_check_pressed(ctrl_kick)) {
+if(keyboard_check_pressed(key_kick) || gamepad_button_check_pressed(controller_num, pad_kick)) {
     kicking = true;
     sprite_index=sprite_kicking;
     depth=-1000;

@@ -50,7 +50,11 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\script_set_controller.gml</script>
+  </scripts>
   <objects name="objects">
+    <object>objects\obj_globals</object>
     <objects name="Fighters">
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
@@ -59,8 +63,8 @@
     <object>objects\obj_music</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_jibbers</room>
     <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_jibbers</room>
     <room>rooms\rm_wukong</room>
     <room>rooms\rm_pxndx</room>
     <room>rooms\rm_bahamut</room>
