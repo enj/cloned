@@ -35,6 +35,7 @@ sprite_index = sprite_standing;
 image_xscale=3;
 image_yscale=3;
 player_speed = 8;
+image_speed = 0.3;
 
 // Set opponent
 opponent = obj_player2;

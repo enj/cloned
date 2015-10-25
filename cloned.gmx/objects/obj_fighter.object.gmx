@@ -77,13 +77,11 @@ if(keyboard_check(ctrl_right)) {
 if(keyboard_check_pressed(ctrl_punch)) {
     punching = true;
     sprite_index=sprite_punching;
-    image_index = -1;
     depth=-1000;
 }
 if(keyboard_check_pressed(ctrl_kick)) {
     kicking = true;
     sprite_index=sprite_kicking;
-    image_index = -1;
     depth=-1000;
 }
 
@@ -142,14 +140,14 @@ if(did_hit) {
             <string>if(punching==true) {
     punching = false;
     sprite_index=sprite_standing;
-    image_index = -1;
-    depth=0;
+    depth=-1;
+    opponent.depth=0;
 }
 if(kicking==true) {
     kicking = false;
     sprite_index=sprite_standing;
-    image_index = -1;
-    depth=0;
+    depth=-1;
+    opponent.depth=0;
 }
 </string>
           </argument>

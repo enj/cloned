@@ -27,14 +27,15 @@
             <kind>1</kind>
             <string>event_inherited();
 // Sprite and Character Parameters (set by chosen fighter)
-sprite_standing = spr_jibbers_standing;
-sprite_punching = spr_jibbers_punch;
-sprite_kicking  = spr_jibbers_kick;
-sprite_walking  = spr_jibbers_walking;
+sprite_standing = spr_wukong_standing;
+sprite_punching = spr_wukong_punch;
+sprite_kicking  = spr_wukong_kick;
+sprite_walking  = spr_wukong_walking;
 sprite_index = sprite_standing;
-image_xscale=3;
-image_yscale=3;
+image_xscale=1;
+image_yscale=1;
 player_speed = 8;
+image_speed=0.3;
 
 // Set opponent
 opponent = obj_player1;
@@ -71,7 +72,7 @@ ctrl_kick  = ord('O');
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>874</string>
+            <string>824</string>
           </argument>
           <argument>
             <kind>0</kind>
