@@ -96,12 +96,12 @@ script_execute(script_set_controller, self);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>11</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="2" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -126,7 +126,7 @@ if(action=="punch") {
     keyboard_key_press(key_kick);
 }
 
-alarm[0]=30;
+alarm[11]=30;
 </string>
           </argument>
         </arguments>
