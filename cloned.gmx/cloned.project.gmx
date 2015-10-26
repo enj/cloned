@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\mus_jibbers</sound>
+    <sound>sound\mus_bahamut</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_empty</sprite>
@@ -53,31 +54,57 @@
       <sprite>sprites\spr_cassandra_kick</sprite>
       <sprite>sprites\spr_cassandra_punch</sprite>
     </sprites>
+    <sprite>sprites\spr_arcade_mode</sprite>
+    <sprite>sprites\spr_vs_mode</sprite>
+    <sprites name="Vs">
+      <sprite>sprites\spr_vs_jibbers</sprite>
+      <sprite>sprites\spr_vs_wukong</sprite>
+      <sprite>sprites\spr_vs</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\back_jibbers</background>
+    <background>background\back_bahamut</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script_set_controller.gml</script>
+    <script>scripts\script_player_load.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_globals</object>
     <objects name="Fighters">
       <object>objects\obj_player1</object>
       <object>objects\obj_player2</object>
       <object>objects\obj_fighter</object>
+      <object>objects\obj_hitbox</object>
     </objects>
-    <object>objects\obj_music</object>
-    <object>objects\obj_hitbox</object>
+    <objects name="Misc">
+      <object>objects\obj_music</object>
+      <object>objects\obj_globals</object>
+    </objects>
+    <objects name="Buttons">
+      <object>objects\obj_arcade_mode</object>
+      <object>objects\obj_vs_mode</object>
+    </objects>
+    <objects name="Character Select">
+      <object>objects\obj_charselect_jibbers</object>
+      <object>objects\obj_charselect_wukong</object>
+    </objects>
+    <objects name="Vs">
+      <object>objects\obj_vs_slider_left</object>
+      <object>objects\obj_vs_slider_right</object>
+      <object>objects\obj_vs</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
     <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_character_select</room>
     <room>rooms\rm_jibbers</room>
     <room>rooms\rm_wukong</room>
     <room>rooms\rm_pxndx</room>
     <room>rooms\rm_bahamut</room>
+    <room>rooms\rm_vs</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

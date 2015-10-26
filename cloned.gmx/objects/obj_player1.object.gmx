@@ -27,16 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 // Sprite and Character Parameters (set by chosen fighter)
-fighter_name="Ryu Player 1";
-sprite_standing = spr_jibbers_standing;
-sprite_punching = spr_jibbers_punch;
-sprite_kicking  = spr_jibbers_kick;
-sprite_walking  = spr_jibbers_walking;
-sprite_index = sprite_standing;
-image_xscale=3;
-image_yscale=3;
-player_speed = 8;
-image_speed = 0.3;
+script_player_load(self, player1);
 
 // Set opponent
 opponent = obj_player2;

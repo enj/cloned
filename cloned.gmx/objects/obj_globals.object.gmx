@@ -31,6 +31,9 @@ used_controllers[1] = false;
 used_controllers[2] = false;
 used_controllers[3] = false;
 
+globalvar player1;
+globalvar player2;
+globalvar stage;
 </string>
           </argument>
         </arguments>
@@ -51,7 +54,7 @@ used_controllers[3] = false;
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>rm_jibbers</room>
+            <room>rm_mainMenu</room>
           </argument>
         </arguments>
       </action>
