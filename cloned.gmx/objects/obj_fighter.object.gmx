@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>kicking=false;
+            <string>fighter_name="Generic";
+kicking=false;
 punching=false;
 hb_y1 = 10;
 hb_y2 = 30;
@@ -50,6 +51,8 @@ sprite_standing = spr_jibbers_standing;
 sprite_punching = spr_jibbers_punch;
 sprite_kicking  = spr_jibbers_kick;
 sprite_walking  = spr_jibbers_walking;
+mask_punching   = mask_jibbers_punch;
+mask_kicking    = mask_jibbers_kick;
 
 // Character parameters
 player_speed = 0;
@@ -85,14 +88,41 @@ if(keyboard_check(key_right) || gamepad_axis_value(controller_num, pad_right)&gt
     hspeed=player_speed;
 }
 if(keyboard_check_pressed(key_punch) || gamepad_button_check_pressed(controller_num, pad_punch)) {
+    if(!punching &amp;&amp; !kicking) {
+    hitbox_obj=instance_create(x,y,obj_hitbox);
+    hitbox_obj.opponent = opponent;
+    hitbox_obj.caller = self.id;
+//    hitbox_obj.image_speed=0;
+    hitbox_obj.sprite_index=mask_punching;
+    hitbox_obj.depth=-2000;
+    hitbox_obj.image_xscale=image_xscale;
+    hitbox_obj.image_yscale=image_yscale;
+    hitbox_obj.image_speed=image_speed;
+    hitbox_obj.punching=true;
+    hitbox_obj.finished_creating=true;
     punching = true;
     sprite_index=sprite_punching;
     depth=-1000;
+    }
+    
 }
 if(keyboard_check_pressed(key_kick) || gamepad_button_check_pressed(controller_num, pad_kick)) {
+    if(!punching &amp;&amp; !kicking) {
+    hitbox_obj=instance_create(x,y,obj_hitbox);
+    hitbox_obj.opponent = opponent;
+    hitbox_obj.caller = self.id;
+    hitbox_obj.sprite_index=mask_kicking;
+    hitbox_obj.depth=-2000;
+    hitbox_obj.image_xscale=image_xscale;
+    hitbox_obj.image_yscale=image_yscale;
+    hitbox_obj.image_speed=0;
+    hitbox_obj.image_speed=image_speed;
+    hitbox_obj.kicking=true;
+    hitbox_obj.finished_creating=true;
     kicking = true;
     sprite_index=sprite_kicking;
     depth=-1000;
+    }
 }
 
 // Check collisions and stop movement
@@ -108,21 +138,21 @@ if(hp&lt;=0) {
 }
 
 // Swap facing direction
-if((facing_right == (opponent.x &lt; self.x))) {
+if((facing_right == (opponent.x &lt; x))) {
     image_xscale*=-1;
     facing_right = !facing_right;
 }
 
 // Check for hit
-var did_hit = (place_meeting(x+hspeed,y,obj_fighter) || place_meeting(x,y+vspeed,obj_fighter));
-if(did_hit) {
-    if(punching==true) {
-        opponent.hp-=5;
-    }
-    if(kicking==true) {
-        opponent.hp-=7;
-    }
-}
+//var did_hit = (place_meeting(x+hspeed,y,obj_fighter) || place_meeting(x,y+vspeed,obj_fighter));
+//if(did_hit) {
+//    if(punching==true) {
+//        opponent.hp-=5;
+//    }
+//    if(kicking==true) {
+//        opponent.hp-=7;
+//    }
+//}
 
 
 </string>

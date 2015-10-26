@@ -14,12 +14,20 @@
       <sprite>sprites\spr_jibbers_walking</sprite>
       <sprite>sprites\spr_jibbers_kick</sprite>
       <sprite>sprites\spr_jibbers_punch</sprite>
+      <sprites name="Masks">
+        <sprite>sprites\mask_jibbers_punch</sprite>
+        <sprite>sprites\mask_jibbers_kick</sprite>
+      </sprites>
     </sprites>
     <sprites name="Wukong">
       <sprite>sprites\spr_wukong_standing</sprite>
       <sprite>sprites\spr_wukong_walking</sprite>
       <sprite>sprites\spr_wukong_kick</sprite>
       <sprite>sprites\spr_wukong_punch</sprite>
+      <sprites name="Masks">
+        <sprite>sprites\mask_wukong_kick</sprite>
+        <sprite>sprites\mask_wukong_punch</sprite>
+      </sprites>
     </sprites>
     <sprites name="Pxndx">
       <sprite>sprites\spr_panda_standing</sprite>
@@ -61,8 +69,10 @@
       <object>objects\obj_fighter</object>
     </objects>
     <object>objects\obj_music</object>
+    <object>objects\obj_hitbox</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_intro</room>
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_jibbers</room>
     <room>rooms\rm_wukong</room>

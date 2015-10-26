@@ -3,14 +3,14 @@
   <type>0</type>
   <xorig>20</xorig>
   <yorigin>80</yorigin>
-  <colkind>1</colkind>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
-  <bboxmode>2</bboxmode>
-  <bbox_left>5</bbox_left>
-  <bbox_right>35</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>81</bbox_bottom>
+  <sepmasks>-1</sepmasks>
+  <bboxmode>0</bboxmode>
+  <bbox_left>34</bbox_left>
+  <bbox_right>59</bbox_right>
+  <bbox_top>11</bbox_top>
+  <bbox_bottom>20</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,8 +20,8 @@
   <width>60</width>
   <height>82</height>
   <frames>
-    <frame index="0">images\spr_jibbers_punch_0.png</frame>
-    <frame index="1">images\spr_jibbers_punch_1.png</frame>
-    <frame index="2">images\spr_jibbers_punch_2.png</frame>
+    <frame index="0">images\mask_jibbers_punch_0.png</frame>
+    <frame index="1">images\mask_jibbers_punch_1.png</frame>
+    <frame index="2">images\mask_jibbers_punch_2.png</frame>
   </frames>
 </sprite>

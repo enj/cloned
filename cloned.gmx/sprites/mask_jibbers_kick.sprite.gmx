@@ -7,21 +7,21 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>59</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>89</bbox_bottom>
+  <bbox_left>21</bbox_left>
+  <bbox_right>53</bbox_right>
+  <bbox_top>7</bbox_top>
+  <bbox_bottom>39</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>49</width>
-  <height>90</height>
+  <width>54</width>
+  <height>81</height>
   <frames>
-    <frame index="0">images\spr_jibbers_0.png</frame>
-    <frame index="1">images\spr_jibbers_1.png</frame>
-    <frame index="2">images\spr_jibbers_2.png</frame>
+    <frame index="0">images\mask_jibbers_kick_0.png</frame>
+    <frame index="1">images\mask_jibbers_kick_1.png</frame>
+    <frame index="2">images\mask_jibbers_kick_2.png</frame>
   </frames>
 </sprite>

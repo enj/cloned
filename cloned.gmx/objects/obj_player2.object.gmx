@@ -27,10 +27,13 @@
             <kind>1</kind>
             <string>event_inherited();
 // Sprite and Character Parameters (set by chosen fighter)
+fighter_name="Ryu Player 2";
 sprite_standing = spr_wukong_standing;
 sprite_punching = spr_wukong_punch;
 sprite_kicking  = spr_wukong_kick;
 sprite_walking  = spr_wukong_walking;
+mask_punching   = mask_wukong_punch;
+mask_kicking    = mask_wukong_kick;
 sprite_index = sprite_standing;
 image_xscale=1;
 image_yscale=1;
