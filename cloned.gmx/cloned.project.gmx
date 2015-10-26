@@ -70,6 +70,7 @@
   <scripts name="scripts">
     <script>scripts\script_set_controller.gml</script>
     <script>scripts\script_player_load.gml</script>
+    <script>scripts\script_draw_health.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Fighters">
