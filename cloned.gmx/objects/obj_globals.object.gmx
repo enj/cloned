@@ -31,9 +31,16 @@ used_controllers[1] = false;
 used_controllers[2] = false;
 used_controllers[3] = false;
 
-globalvar player1;
-globalvar player2;
-globalvar stage;
+globalvar player1; //Name of character
+globalvar player2; //Name of character
+globalvar stage;   //Name of stage
+globalvar controller_obj;
+controller_obj[0] = instance_create(0,0,obj_controller);
+controller_obj[1] = instance_create(0,0,obj_controller);
+
+globalvar fighter_obj;
+randomize();
+
 </string>
           </argument>
         </arguments>

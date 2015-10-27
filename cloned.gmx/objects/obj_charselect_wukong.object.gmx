@@ -51,6 +51,8 @@
             <string>global.player1="wukong";
 global.player2="jibbers";
 global.stage="jibbers";
+with(controller_obj[0]) instance_change(obj_ai_controller, true);
+with(controller_obj[1]) instance_change(obj_ai_controller, true);
 room_goto(rm_vs);
 </string>
           </argument>

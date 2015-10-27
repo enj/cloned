@@ -4,7 +4,7 @@ var bar_direction = 0; // 0 = left, 1 = right, 2 = top, 3 = bottom
 
 // Fix assumption if needed
 var width = 400;
-if (opponent == obj_player1) {
+if (opponent == fighter_obj[0]) {
     bar_direction = 1;
     x1 = display_get_gui_width() - 50 - width - x1; //TODO this needs work
 }
@@ -17,7 +17,7 @@ var dead_color = c_red;
 var full_color = c_green;
 var show_bg = true;
 var show_border = true;
-var max_hp = 100; //TODO move elsewhere
+//var max_hp = 100; //TODO move elsewhere
 
 // Calculated vars
 var x2 = x1 + width;

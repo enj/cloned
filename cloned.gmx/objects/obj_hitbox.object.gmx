@@ -58,11 +58,11 @@ finished_creating=false;
 // Check for hit
     if(place_meeting(x,y,opponent)) {
         if(punching==true) {
-            opponent.hp-=5;
+            opponent.hp-=(caller).punch_damage;
             with(self) instance_destroy();
         }
         if(kicking==true) {
-            opponent.hp-=7;
+            opponent.hp-=(caller).kick_damage;
             with(self) instance_destroy();
         }
     }

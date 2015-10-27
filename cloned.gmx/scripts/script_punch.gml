@@ -1,4 +1,5 @@
 var my_fighter=argument0;
+if(my_fighter.attacking) exit;
 
 var hitbox_obj=instance_create(my_fighter.x,my_fighter.y,obj_hitbox);
 with(hitbox_obj) {    
@@ -13,7 +14,7 @@ with(hitbox_obj) {
 }
 
 with(my_fighter) {
-    punching=true;
+    attacking=true;
     sprite_index=sprite_punching;
     depth=-1000;
 }

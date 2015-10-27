@@ -71,13 +71,20 @@
     <script>scripts\script_set_controller.gml</script>
     <script>scripts\script_player_load.gml</script>
     <script>scripts\script_draw_health.gml</script>
-    <script>scripts\script_punch.gml</script>
-    <script>scripts\script_kick.gml</script>
+    <scripts name="Player Actions">
+      <script>scripts\script_kick.gml</script>
+      <script>scripts\script_punch.gml</script>
+      <script>scripts\script_move_left.gml</script>
+      <script>scripts\script_move_right.gml</script>
+      <script>scripts\script_jump.gml</script>
+      <script>scripts\script_block.gml</script>
+      <script>scripts\script_special_attack.gml</script>
+    </scripts>
+    <script>scripts\script_start_fight_room.gml</script>
+    <script>scripts\script_ai_decide.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Fighters">
-      <object>objects\obj_player1</object>
-      <object>objects\obj_player2</object>
       <object>objects\obj_fighter</object>
       <object>objects\obj_hitbox</object>
     </objects>
@@ -97,6 +104,11 @@
       <object>objects\obj_vs_slider_left</object>
       <object>objects\obj_vs_slider_right</object>
       <object>objects\obj_vs</object>
+    </objects>
+    <objects name="Controllers">
+      <object>objects\obj_controller</object>
+      <object>objects\obj_player_controller</object>
+      <object>objects\obj_ai_controller</object>
     </objects>
   </objects>
   <rooms name="rooms">
