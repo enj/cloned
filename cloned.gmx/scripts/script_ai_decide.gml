@@ -22,9 +22,19 @@ var prob_block   = 100;
 
 if(opp_range>separation) {
     if(opponent.attacking) {
-        prob_back += prob_forward/2;
-        prob_forward /= 2;
-    } 
+        if(opp_range>=my_range) {
+            prob_block *= 3;
+            prob_forward *= 2;
+        } else {
+            prob_back += prob_forward/2;
+            prob_forward /= 2;
+        }
+    } else {
+        if(opp_range>=my_range) {
+            prob_back /= 4;
+            prob_forward *= 4;
+        }
+    }
 } else {
     prob_back /= 4;
     prob_forward *= 4;

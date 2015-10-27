@@ -91,6 +91,7 @@
     <objects name="Misc">
       <object>objects\obj_music</object>
       <object>objects\obj_globals</object>
+      <object>objects\obj_referee</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_arcade_mode</object>

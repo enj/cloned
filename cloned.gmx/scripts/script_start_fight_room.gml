@@ -30,10 +30,11 @@ fighter_obj[1].opponent=fighter_obj[0];
 
 with(controller_obj[0]) {
     fighter = fighter_obj[0];
-    run_step=true;
+//    run_step=true;
 }
 with(controller_obj[1]) {
     fighter = fighter_obj[1];
-    run_step=true;
+//    run_step=true;
 }
 
+instance_create(0,0,obj_referee);

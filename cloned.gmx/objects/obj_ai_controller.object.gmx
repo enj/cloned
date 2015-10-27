@@ -51,7 +51,7 @@ step=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(run_step) {// &amp;&amp; step%5==0) {
+            <string>if(run_step &amp;&amp; step%5==0) {
     hspeed = 0;
     script_ai_decide();
     step=0;

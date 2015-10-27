@@ -61,19 +61,19 @@ script_set_controller(self);
           <argument>
             <kind>1</kind>
             <string>if(run_step) {
-fighter.hspeed = 0;
-if(keyboard_check(key_left) || gamepad_axis_value(controller_num, pad_left)&lt;-.8) {
-    script_execute(script_move_left, fighter);
-}
-if(keyboard_check(key_right) || gamepad_axis_value(controller_num, pad_right)&gt;.8) {
-    script_execute(script_move_right, fighter);
-}
-if(keyboard_check_pressed(key_punch) || gamepad_button_check_pressed(controller_num, pad_punch)) {
-    script_execute(script_punch, fighter);    
-}
-if(keyboard_check_pressed(key_kick) || gamepad_button_check_pressed(controller_num, pad_kick)) {
-    script_execute(script_kick, fighter);
-}
+    fighter.hspeed = 0;
+    if(keyboard_check(key_left) || gamepad_axis_value(controller_num, pad_left)&lt;-.8) {
+        script_execute(script_move_left, fighter);
+    }
+    if(keyboard_check(key_right) || gamepad_axis_value(controller_num, pad_right)&gt;.8) {
+        script_execute(script_move_right, fighter);
+    }
+    if(keyboard_check_pressed(key_punch) || gamepad_button_check_pressed(controller_num, pad_punch)) {
+        script_execute(script_punch, fighter);    
+    }
+    if(keyboard_check_pressed(key_kick) || gamepad_button_check_pressed(controller_num, pad_kick)) {
+        script_execute(script_kick, fighter);
+    }
 }
 </string>
           </argument>
