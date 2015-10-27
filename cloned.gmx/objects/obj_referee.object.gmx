@@ -99,30 +99,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message(winner_message);
+            <string>//show_message(winner_message);
 </string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>224</id>
+        <id>223</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
+        <functionname>action_current_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>rm_character_select</room>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
