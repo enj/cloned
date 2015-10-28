@@ -12,65 +12,63 @@ var my_punch_range = fighter.punch_range;
 var my_range  = max(fighter.punch_range, fighter.kick_range);
 var opp_range = max(opponent.punch_range, opponent.kick_range);
 var opp_approaching=((opponent.hspeed+separation)<separation);
-
-var p_punch   = prob_punch;
-var p_kick    = prob_kick;
-var p_forward = prob_forward;
-var p_back    = prob_back;
-var p_jump    = prob_jump;
-var p_special = prob_special;
-var p_block   = prob_block;
-
+var prob_punch = 100;
+var prob_kick  = 100;
+var prob_forward = 100;
+var prob_back    = 100;
+var prob_jump    = 100;
+var prob_special = 100;
+var prob_block   = 100;
 
 if(opp_range>separation) {
     if(opponent.attacking) {
         if(opp_range>=my_range) {
-            p_block *= block_1;                    //block_1
-            p_forward *= forward_1;                  //forward_1
+            prob_block *= 3;                    //block_1
+            prob_forward *= 2;                  //forward_1
         } else {
-            p_back *= back_1;        //back_1
-            p_forward *= forward_2;                  //forward_2
+            prob_back += prob_forward/2;        //back_1
+            prob_forward /= 2;                  //forward_2
         }
     } else {
         if(opp_range>=my_range) {
-            p_back *= back_2;                     //back_2
-            p_forward *= forward_3;                  //forward_3
+            prob_back /= 4;                     //back_2
+            prob_forward *= 4;                  //forward_3
         }
     }
 } else {
-    p_back *= back_3;                             //back_3
-    p_forward *= forward_4;                          //forward_4
+    prob_back /= 4;                             //back_3
+    prob_forward *= 4;                          //forward_4
 }
 if(my_range>separation) {
     if(my_kick_range>separation) {
-        p_kick *= kick_1;                          //kick_1
+        prob_kick*=10;                          //kick_1
     } else {
-        p_kick *= kick_2;                            //kick_2
+        prob_kick=0;                            //kick_2
     }
     if(my_punch_range>separation) {
-        p_punch *= punch_1;                         //punch_1
+        prob_punch*=10;                         //punch_1
     } else {
-        p_punch *= punch_2;                           //punch_2
+        prob_punch=0;                           //punch_2
     }
-    p_forward *= forward_5;                          //forward_5
-    p_back *= back_4;                             //back_4
+    prob_forward /= 2;                          //forward_5
+    prob_back *= 2;                             //back_4
 } else {
-    p_kick *= kick_3;                                //kick_3
-    p_punch *= punch_3;                               //punch_3
+    prob_kick=0;                                //kick_3
+    prob_punch=0;                               //punch_3
 }
 
-var total=p_back+p_forward+p_punch+p_kick;
+var total=prob_back+prob_forward+prob_punch+prob_kick;
 var r = random(total);
 var i = 0;
 var action = "none";
 if(i<r) action="back";
-i+=p_back;
+i+=prob_back;
 if(i<r) action="forward";
-i+=p_forward;
+i+=prob_forward;
 if(i<r) action="punch";
-i+=p_punch;
+i+=prob_punch;
 if(i<r) action="kick";
-i+=p_kick;
+i+=prob_kick;
 
 switch(action) {
     case "none":

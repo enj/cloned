@@ -61,6 +61,7 @@
       <sprite>sprites\spr_vs_wukong</sprite>
       <sprite>sprites\spr_vs</sprite>
     </sprites>
+    <sprite>sprites\spr_training</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_jibbers</background>
@@ -70,6 +71,7 @@
   <scripts name="scripts">
     <script>scripts\script_set_controller.gml</script>
     <script>scripts\script_player_load.gml</script>
+    <script>scripts\script_start_fight_room.gml</script>
     <script>scripts\script_draw_health.gml</script>
     <scripts name="Player Actions">
       <script>scripts\script_kick.gml</script>
@@ -80,13 +82,23 @@
       <script>scripts\script_block.gml</script>
       <script>scripts\script_special_attack.gml</script>
     </scripts>
-    <script>scripts\script_start_fight_room.gml</script>
-    <script>scripts\script_ai_decide.gml</script>
+    <scripts name="SarahAI">
+      <script>scripts\script_ai_mutate_helper.gml</script>
+      <script>scripts\script_ai_fitness.gml</script>
+      <script>scripts\script_mate_ai.gml</script>
+      <script>scripts\script_read_ai_generation.gml</script>
+      <script>scripts\script_gen_ai_temp.gml</script>
+      <script>scripts\script_save_ai_generation.gml</script>
+      <script>scripts\script_ai_decide_old.gml</script>
+      <script>scripts\script_ai_decide.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Fighters">
       <object>objects\obj_fighter</object>
       <object>objects\obj_hitbox</object>
+      <object>objects\obj_jibbers</object>
+      <object>objects\obj_wukong</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_music</object>
@@ -99,7 +111,7 @@
     </objects>
     <objects name="Character Select">
       <object>objects\obj_charselect_jibbers</object>
-      <object>objects\obj_charselect_wukong</object>
+      <object>objects\obj_training</object>
     </objects>
     <objects name="Vs">
       <object>objects\obj_vs_slider_left</object>

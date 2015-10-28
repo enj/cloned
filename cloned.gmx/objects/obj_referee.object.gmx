@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -81,6 +81,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>step</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="0">
       <action>
@@ -100,6 +124,20 @@
           <argument>
             <kind>1</kind>
             <string>//show_message(winner_message);
+//script_gen_ai_temp(fighter_obj[0], global.p1_ai_map);
+//script_gen_ai_temp(fighter_obj[1], global.p2_ai_map);
+//game_end();
+script_ai_fitness(fighter_obj[0], global.p1_ai_map);
+script_ai_fitness(fighter_obj[1], global.p2_ai_map);
+if(global.ai_training_instance==11) {
+    script_mate_ai(fighter_obj[0].fighter_name,global.p1_ai_map);
+    script_mate_ai(fighter_obj[1].fighter_name,global.p2_ai_map);
+    global.ai_training_instance=0;
+    global.ai_training_generation++;
+}
+global.ai_training_instance++;
+global.ai_training_total++;
+
 </string>
           </argument>
         </arguments>
@@ -136,7 +174,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(fighter_obj[0].hp&lt;=0) {
+            <string>step++;
+if(!declared_winner &amp;&amp; step&gt;=900) {
+//    fighter_obj[0].hp=0
+//    fighter_obj[1].hp=0
+    declared_winner=true;
+    alarm[0]=60;
+}
+
+if(fighter_obj[0].hp&lt;=0) {
     controller_obj[0].run_step = false;
     controller_obj[1].run_step = false;
     if(!declared_winner) {
@@ -154,6 +200,29 @@
     }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(500,100,string(30-step/30));
 </string>
           </argument>
         </arguments>

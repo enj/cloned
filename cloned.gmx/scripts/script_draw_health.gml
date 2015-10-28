@@ -25,4 +25,4 @@ var y2 = y1 + height;
 var amount = (hp / max_hp) * 100;
 
 draw_healthbar(x1, y1, x2, y2, amount, bg_color, dead_color, full_color, bar_direction, show_bg, show_border);
-
+draw_text(x1, y1, string(global.wins[player]));

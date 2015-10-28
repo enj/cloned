@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+is_ai=true;
 fighter=obj_fighter;
 step=0;
-
+ai_map=undefined;
 </string>
           </argument>
         </arguments>
@@ -57,6 +58,113 @@ step=0;
     step=0;
 }
 step++;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>prob_punch   = ds_map_find_value(ai_map, "prob_punch");
+prob_kick    = ds_map_find_value(ai_map, "prob_kick");
+prob_forward = ds_map_find_value(ai_map, "prob_forward");
+prob_back    = ds_map_find_value(ai_map, "prob_back");
+prob_jump    = ds_map_find_value(ai_map, "prob_jump");
+prob_special = ds_map_find_value(ai_map, "prob_special");
+prob_block   = ds_map_find_value(ai_map, "prob_block");
+block_1      = ds_map_find_value(ai_map, "block_1");
+forward_1    = ds_map_find_value(ai_map, "forward_1");
+forward_2    = ds_map_find_value(ai_map, "forward_2");
+forward_3    = ds_map_find_value(ai_map, "forward_3");
+forward_4    = ds_map_find_value(ai_map, "forward_4");
+forward_5    = ds_map_find_value(ai_map, "forward_5");
+back_1       = ds_map_find_value(ai_map, "back_1");
+back_2       = ds_map_find_value(ai_map, "back_2");
+back_3       = ds_map_find_value(ai_map, "back_3");
+back_4       = ds_map_find_value(ai_map, "back_4");
+punch_1      = ds_map_find_value(ai_map, "punch_1");
+punch_2      = ds_map_find_value(ai_map, "punch_2");
+punch_3      = ds_map_find_value(ai_map, "punch_3");
+kick_1       = ds_map_find_value(ai_map, "kick_1");
+kick_2       = ds_map_find_value(ai_map, "kick_2");
+kick_3       = ds_map_find_value(ai_map, "kick_3");
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!is_undefined(ai_map)) {
+    draw_text(fighter.x, fighter.y-300, string(ds_map_find_value(ai_map,"generation"))+","+string(ds_map_find_value(ai_map,"fitness")));
+    var draw_x;
+    var player;
+    if(self.id==controller_obj[0]) {
+        draw_x=10;
+        player = 1;
+    } else {
+        draw_x=850;
+        player = 2;
+    }
+    draw_text(draw_x,40,"Player " + string(player) + "#"
+    + "prob_punch: " + string(prob_punch) + "#"
+    + "prob_kick: " + string(prob_kick) + "#"
+    + "prob_forward: " + string(prob_forward) + "#"
+    + "prob_back: " + string(prob_back) + "#"
+    + "prob_block: " + string(prob_block) + "#"
+    + "prob_jump: " + string(prob_jump) + "#"
+    + "prob_special: " + string(prob_special) + "##"
+    + "block_1: " + string(block_1) + "#"
+    + "forward_1: " + string(forward_1) + "#"
+    + "forward_2: " + string(forward_2) + "#"
+    + "forward_3: " + string(forward_3) + "#"
+    + "forward_4: " + string(forward_4) + "#"
+    + "forward_5: " + string(forward_5) + "#"
+    + "back_1: " + string(back_1) + "#"
+    + "back_2: " + string(back_2) + "#"
+    + "back_3: " + string(back_3) + "#"
+    + "back_4: " + string(back_4) + "#"
+    + "punch_1: " + string(punch_1) + "#"
+    + "punch_2: " + string(punch_2) + "#"
+    + "punch_3: " + string(punch_3) + "#"
+    + "kick_1: " + string(kick_1) + "#"
+    + "kick_2: " + string(kick_2) + "#"
+    + "kick_3: " + string(kick_3) + "#"
+    + "Generation: " + string(ai_training_generation) + "#"
+    );
+}
+
 </string>
           </argument>
         </arguments>

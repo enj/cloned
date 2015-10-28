@@ -53,6 +53,18 @@ global.player2="jibbers";
 global.stage="jibbers";
 with(controller_obj[0]) instance_change(obj_ai_controller, true);
 with(controller_obj[1]) instance_change(obj_ai_controller, true);
+
+globalvar p1_ai_map;
+globalvar p2_ai_map;
+for(i=0;i&lt;12;i++) {
+    p1_ai_map[i] = ds_map_create();
+    p2_ai_map[i] = ds_map_create();
+}
+
+script_read_ai_generation("Wukong", p1_ai_map);
+script_read_ai_generation("Jibbers", p2_ai_map);
+
+
 room_goto(rm_vs);
 </string>
           </argument>
