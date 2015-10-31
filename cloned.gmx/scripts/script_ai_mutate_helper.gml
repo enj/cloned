@@ -6,7 +6,7 @@ offspring_pos = argument3;
 
 var size, key, ave, temp_fitness, temp_mr, temp_ma, mutation_rate, mutation_amt;
 mutation_rate=.05;
-mutation_amt = 2;
+mutation_amt = 10;
 
 size=ds_map_size(ai_map[parent1]);
 temp_fitness=-1;
@@ -24,9 +24,7 @@ for(j=0;j<size-1;j++) {
     if(key!="fitness") {
 //        show_message("Updating [" + key + "]");
         if(random(1)<mutation_rate) {
-            ave*=random(mutation_amt);
-            if(ave>100) ave = 100;
-            if(ave<.01) ave = random(mutation_amt);
+            ave =random(mutation_amt);
         }
     }
     if(key=="generation") {

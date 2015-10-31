@@ -31,18 +31,14 @@ with(controller_obj[0]) {
     fighter = fighter_obj[0];
     fighter.player=0;
     if(controller_obj[0].is_ai) {
-//        show_message("Changing map 0 = [" + string(global.ai_training_instance) + "]");
-        ai_map=global.p1_ai_map[ai_training_instance];
-        event_perform(ev_other, ev_user0);
+        ai_grid=global.p1_ai_array[ai_training_instance];
     }
 }
 with(controller_obj[1]) {
     fighter = fighter_obj[1];
     fighter.player=1;
     if(controller_obj[1].is_ai) {
-//        show_message("Changing map 1 = [" + string(global.ai_training_instance) + "]");
-        ai_map=global.p2_ai_map[ai_training_instance];
-        event_perform(ev_other, ev_user0);
+        ai_grid=global.p2_ai_array[ai_training_instance];
     }
 }
 

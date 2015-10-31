@@ -83,14 +83,15 @@
       <script>scripts\script_special_attack.gml</script>
     </scripts>
     <scripts name="SarahAI">
-      <script>scripts\script_ai_mutate_helper.gml</script>
       <script>scripts\script_ai_fitness.gml</script>
       <script>scripts\script_mate_ai.gml</script>
       <script>scripts\script_read_ai_generation.gml</script>
       <script>scripts\script_gen_ai_temp.gml</script>
       <script>scripts\script_save_ai_generation.gml</script>
-      <script>scripts\script_ai_decide_old.gml</script>
       <script>scripts\script_ai_decide.gml</script>
+      <script>scripts\script_get_state.gml</script>
+      <script>scripts\script_pick_action_by_state.gml</script>
+      <script>scripts\script_new_mating_helper.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -108,6 +109,7 @@
     <objects name="Buttons">
       <object>objects\obj_arcade_mode</object>
       <object>objects\obj_vs_mode</object>
+      <object>objects\obj_room_speed</object>
     </objects>
     <objects name="Character Select">
       <object>objects\obj_charselect_jibbers</object>
@@ -130,6 +132,7 @@
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_jibbers</room>
     <room>rooms\rm_wukong</room>
+    <room>rooms\rm_training</room>
     <room>rooms\rm_pxndx</room>
     <room>rooms\rm_bahamut</room>
     <room>rooms\rm_vs</room>

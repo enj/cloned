@@ -88,13 +88,19 @@ with(controller_obj[0]) instance_change(obj_player_controller, true);
 
 globalvar p1_ai_map;
 globalvar p2_ai_map;
-for(i=0;i&lt;12;i++) {
+globalvar p1_ai_array;
+globalvar p2_ai_array;
+
+
+for(i=99;i&gt;=0;i--) {
     p1_ai_map[i] = ds_map_create();
     p2_ai_map[i] = ds_map_create();
+    p1_ai_array[i] = ds_grid_create(10,32);   // New method
+    p2_ai_array[i] = ds_grid_create(10,32);   // New method
 }
 
-script_read_ai_generation("Wukong", p1_ai_map);
-script_read_ai_generation("Jibbers", p2_ai_map);
+script_read_ai_generation("Wukong", p1_ai_array);
+script_read_ai_generation("Jibbers", p2_ai_array);
 
 room_goto(rm_vs);
 </string>

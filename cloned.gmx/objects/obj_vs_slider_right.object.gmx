@@ -81,6 +81,9 @@ image_yscale=scale;
     case "bahamut":
         room_goto(rm_bahamut);
         break;
+    case "training":
+        room_goto(rm_training);
+        break;
 }
 </string>
           </argument>

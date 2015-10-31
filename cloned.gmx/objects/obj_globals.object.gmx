@@ -55,6 +55,9 @@ ai_training_total=0;
 
 globalvar training_mode;
 training_mode=false;
+
+globalvar ai_fitness_1;
+globalvar ai_fitness_2;
 </string>
           </argument>
         </arguments>

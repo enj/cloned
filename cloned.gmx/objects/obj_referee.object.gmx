@@ -123,15 +123,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//show_message(winner_message);
-//script_gen_ai_temp(fighter_obj[0], global.p1_ai_map);
-//script_gen_ai_temp(fighter_obj[1], global.p2_ai_map);
-//game_end();
-script_ai_fitness(fighter_obj[0], global.p1_ai_map);
-script_ai_fitness(fighter_obj[1], global.p2_ai_map);
-if(global.ai_training_instance==11) {
-    script_mate_ai(fighter_obj[0].fighter_name,global.p1_ai_map);
-    script_mate_ai(fighter_obj[1].fighter_name,global.p2_ai_map);
+            <string>
+script_ai_fitness(fighter_obj[0], global.p1_ai_array, 0);
+script_ai_fitness(fighter_obj[1], global.p2_ai_array, 1);
+if(global.ai_training_instance==array_length_1d(global.p1_ai_array)-1) {
+    global.p1_ai_array = script_mate_ai(0);
+    global.p2_ai_array = script_mate_ai(1);
     global.ai_training_instance=0;
     global.ai_training_generation++;
 }

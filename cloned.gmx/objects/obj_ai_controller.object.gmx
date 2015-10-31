@@ -29,7 +29,8 @@
 is_ai=true;
 fighter=obj_fighter;
 step=0;
-ai_map=undefined;
+ai_grid=undefined;
+state=0;
 </string>
           </argument>
         </arguments>
@@ -63,52 +64,6 @@ step++;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>prob_punch   = ds_map_find_value(ai_map, "prob_punch");
-prob_kick    = ds_map_find_value(ai_map, "prob_kick");
-prob_forward = ds_map_find_value(ai_map, "prob_forward");
-prob_back    = ds_map_find_value(ai_map, "prob_back");
-prob_jump    = ds_map_find_value(ai_map, "prob_jump");
-prob_special = ds_map_find_value(ai_map, "prob_special");
-prob_block   = ds_map_find_value(ai_map, "prob_block");
-block_1      = ds_map_find_value(ai_map, "block_1");
-forward_1    = ds_map_find_value(ai_map, "forward_1");
-forward_2    = ds_map_find_value(ai_map, "forward_2");
-forward_3    = ds_map_find_value(ai_map, "forward_3");
-forward_4    = ds_map_find_value(ai_map, "forward_4");
-forward_5    = ds_map_find_value(ai_map, "forward_5");
-back_1       = ds_map_find_value(ai_map, "back_1");
-back_2       = ds_map_find_value(ai_map, "back_2");
-back_3       = ds_map_find_value(ai_map, "back_3");
-back_4       = ds_map_find_value(ai_map, "back_4");
-punch_1      = ds_map_find_value(ai_map, "punch_1");
-punch_2      = ds_map_find_value(ai_map, "punch_2");
-punch_3      = ds_map_find_value(ai_map, "punch_3");
-kick_1       = ds_map_find_value(ai_map, "kick_1");
-kick_2       = ds_map_find_value(ai_map, "kick_2");
-kick_3       = ds_map_find_value(ai_map, "kick_3");
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -126,16 +81,19 @@ kick_3       = ds_map_find_value(ai_map, "kick_3");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!is_undefined(ai_map)) {
-    draw_text(fighter.x, fighter.y-300, string(ds_map_find_value(ai_map,"generation"))+","+string(ds_map_find_value(ai_map,"fitness")));
+            <string>if(false &amp;&amp; !is_undefined(ai_map)) {
+//    draw_text(fighter.x, fighter.y-300, string(ds_map_find_value(ai_map,"generation"))+","+string(ds_map_find_value(ai_map,"fitness")));
     var draw_x;
     var player;
+    var fit;
     if(self.id==controller_obj[0]) {
         draw_x=10;
         player = 1;
+        fit=global.ai_fitness_1[ai_training_iteration];
     } else {
         draw_x=850;
         player = 2;
+        fit=global.ai_fitness_1[ai_training_iteration];
     }
     draw_text(draw_x,40,"Player " + string(player) + "#"
     + "prob_punch: " + string(prob_punch) + "#"
@@ -161,10 +119,35 @@ kick_3       = ds_map_find_value(ai_map, "kick_3");
     + "kick_1: " + string(kick_1) + "#"
     + "kick_2: " + string(kick_2) + "#"
     + "kick_3: " + string(kick_3) + "#"
-    + "Generation: " + string(ai_training_generation) + "#"
+    + "Generation: " + string(ds_map_find_value(ai_map,"generation")) + "#"
+    + "State: " + string(state)
     );
 }
 
+if(!is_undefined(ai_grid)) {
+    var draw_x;
+    var player;
+    if(self.id==controller_obj[0]) {
+        draw_x=10;
+        player = 1;
+    } else {
+        draw_x=850;
+        player = 2;
+    }
+    draw_text(draw_x,40,"Player " + string(player) + "#"
+    + "prob_none: " + string(ds_grid_get(ai_grid,0,state)) + "#"
+    + "prob_punch: " + string(ds_grid_get(ai_grid,3,state)) + "#"
+    + "prob_kick: " + string(ds_grid_get(ai_grid,4,state)) + "#"
+    + "prob_forward: " + string(ds_grid_get(ai_grid,2,state)) + "#"
+    + "prob_back: " + string(ds_grid_get(ai_grid,1,state)) + "#"
+    + "prob_block: " + string(ds_grid_get(ai_grid,5,state)) + "#"
+    + "prob_jump: " + string(ds_grid_get(ai_grid,6,state)) + "#"
+    + "prob_special: " + string(ds_grid_get(ai_grid,7,state)) + "##"
+    + "instance: " + string(global.ai_training_instance) + "#"
+    + "Generation: " + string(global.ai_training_generation) + "#"
+    + "State: " + string(state)
+    );
+}
 </string>
           </argument>
         </arguments>
