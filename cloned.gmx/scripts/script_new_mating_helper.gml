@@ -24,3 +24,17 @@ for(var i=0;i<ds_grid_height(parent_grid[0]);i++) {
     }
 }
 
+//for(var i=0;i<ds_grid_height(parent_grid[0]);i++) {
+//    var p1_message = "Parent 1: ";
+//    var p2_message = "Parent 2: ";
+//    var child_message = "Child:  ";
+//    for(var j=0;j<ds_grid_width(parent_grid[0]);j++) {
+//        p1_message += ds_grid_get(parent_grid[0], j,i);
+//        p2_message += ds_grid_get(parent_grid[1], j,i);
+//        child_message += ds_grid_get(child, j,i);
+//    }
+//}
+
+return child;
+
+

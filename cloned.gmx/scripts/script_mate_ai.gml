@@ -46,7 +46,7 @@ var pos=0;
 
 //Mate the best 10 with the second best 10 - yields 10 offspring
 //Copy best 10 to next generation - yields 10
-for(a=0;a<10;a++) {
+for(var a=0;a<10;a++) {
     temp_array[pos]=ai_array[a];
     pos++;
     temp_grid=script_new_mating_helper(ai_array[a], ai_array[a+10], a, a+10, pos);
@@ -57,7 +57,7 @@ for(a=0;a<10;a++) {
 
 
 //Mate 1-80 with random - yields 80 offspring
-for(b=0;b<array_length_1d(ai_array)-20;b++) {
+for(var b=0;b<array_length_1d(ai_array)-20;b++) {
     var second = irandom(array_length_1d(ai_array)-1);
     temp_grid=script_new_mating_helper(ai_array[b], ai_array[second], b, second, pos);
     temp_array[pos]=temp_grid;
@@ -67,11 +67,10 @@ for(b=0;b<array_length_1d(ai_array)-20;b++) {
 
 
 //Shuffle the array so the best fighters don't always fight the best.
-var l,arr;
-l=ds_list_create()
-for (arr=0 arr<array_length_1d(temp_array) arr+=1) ds_list_add(l,temp_array[arr])
+var l=ds_list_create()
+for (var arr=0; arr<array_length_1d(temp_array); arr+=1) ds_list_add(l,temp_array[arr])
 ds_list_shuffle(l)
-for (arr=0 arr<array_length_1d(temp_array) arr+=1) temp_array[arr]=ds_list_find_value(l,arr)
+for (var arr2=0; arr2<array_length_1d(temp_array); arr2+=1) temp_array[arr2]=ds_list_find_value(l,arr2)
 ds_list_destroy(l)
 
 
