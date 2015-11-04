@@ -1,5 +1,6 @@
 var my_fighter=argument0;
-if(my_fighter.attacking) exit;
+if(my_fighter.attacking || my_fighter.blocking) exit;
+my_fighter.hspeed=0;
 
 var hitbox_obj=instance_create(my_fighter.x,my_fighter.y,obj_hitbox);
 with(hitbox_obj) {    

@@ -74,6 +74,12 @@ script_set_controller(self);
     if(keyboard_check_pressed(key_kick) || gamepad_button_check_pressed(controller_num, pad_kick)) {
         script_execute(script_kick, fighter);
     }
+    if(keyboard_check_pressed(key_block) || gamepad_button_check_pressed(controller_num, pad_block) &amp;&amp; !fighter.blocking) {
+        script_execute(script_block, fighter);
+    }
+    if(fighter.blocking &amp;&amp; !(keyboard_check_pressed(key_block) || gamepad_button_check(controller_num, pad_block))) {
+        script_execute(script_block_end, fighter);
+    }
 }
 </string>
           </argument>

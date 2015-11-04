@@ -18,6 +18,10 @@ for(pick=0;pick<ds_grid_width(ai_grid)-2;pick++){
     sum+=ds_grid_get(ai_grid, pick, state);
 }
 
+if(fighter.blocking && pick!=5) {
+    script_block_end(fighter);
+}
+
 switch(pick) {
     case 0:
         //none

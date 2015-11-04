@@ -27,11 +27,13 @@
             <kind>1</kind>
             <string>fighter_name="Generic";
 attacking=false;
+blocking=false;
 hb_y1 = 10;
 hb_y2 = 30;
 hbo_y1 = 10;
 hbo_y2 = 30;
 player_speed=0;
+base_image_speed=0.3;
 player=-1;
 opponent = self;
 facing_right = true;
@@ -42,6 +44,7 @@ sprite_standing = spr_jibbers_standing;
 sprite_punching = spr_jibbers_punch;
 sprite_kicking  = spr_jibbers_kick;
 sprite_walking  = spr_jibbers_walking;
+sprite_blocking = spr_jibbers_standing;
 mask_punching   = mask_jibbers_punch;
 mask_kicking    = mask_jibbers_kick;
 
@@ -169,6 +172,17 @@ if((facing_right == (opponent.x &lt; x))) {
             <kind>1</kind>
             <string>if(attacking==true) {
     attacking = false;
+    sprite_index=sprite_standing;
+    depth=-1;
+    opponent.depth=0;
+}
+
+if(blocking==true) {
+    image_speed=0;
+}
+
+if(image_speed&lt;0) {
+    image_speed = base_image_speed;
     sprite_index=sprite_standing;
     depth=-1;
     opponent.depth=0;

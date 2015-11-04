@@ -1,7 +1,7 @@
 var attacker = argument0;
 var victim = argument1;
 var type = argument2;
-var guard = false;
+var guard = victim.blocking;
 
 var damage;
 switch(type) {
