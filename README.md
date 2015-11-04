@@ -8,11 +8,11 @@ It will be awesome :)
   2. Click on Arcade
   3. Select your character
 
-##Controls
+##Controls:
   * Forward: Right Arrow
   * Back:    Left Arrow
-  * Punch:   Space
-  * Kick:    Control
+  * Punch:   Control
+  * Kick:    Space
   * Jump:    Up Arrow
 
 
