@@ -81,73 +81,32 @@ step++;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(false &amp;&amp; !is_undefined(ai_map)) {
-//    draw_text(fighter.x, fighter.y-300, string(ds_map_find_value(ai_map,"generation"))+","+string(ds_map_find_value(ai_map,"fitness")));
+            <string>
+if(false &amp;&amp; !is_undefined(ai_grid)) {
     var draw_x;
     var player;
-    var fit;
     if(self.id==controller_obj[0]) {
         draw_x=10;
         player = 1;
-        fit=global.ai_fitness_1[ai_training_iteration];
     } else {
         draw_x=850;
         player = 2;
-        fit=global.ai_fitness_1[ai_training_iteration];
     }
-    draw_text(draw_x,40,"Player " + string(player) + "#"
-    + "prob_punch: " + string(prob_punch) + "#"
-    + "prob_kick: " + string(prob_kick) + "#"
-    + "prob_forward: " + string(prob_forward) + "#"
-    + "prob_back: " + string(prob_back) + "#"
-    + "prob_block: " + string(prob_block) + "#"
-    + "prob_jump: " + string(prob_jump) + "#"
-    + "prob_special: " + string(prob_special) + "##"
-    + "block_1: " + string(block_1) + "#"
-    + "forward_1: " + string(forward_1) + "#"
-    + "forward_2: " + string(forward_2) + "#"
-    + "forward_3: " + string(forward_3) + "#"
-    + "forward_4: " + string(forward_4) + "#"
-    + "forward_5: " + string(forward_5) + "#"
-    + "back_1: " + string(back_1) + "#"
-    + "back_2: " + string(back_2) + "#"
-    + "back_3: " + string(back_3) + "#"
-    + "back_4: " + string(back_4) + "#"
-    + "punch_1: " + string(punch_1) + "#"
-    + "punch_2: " + string(punch_2) + "#"
-    + "punch_3: " + string(punch_3) + "#"
-    + "kick_1: " + string(kick_1) + "#"
-    + "kick_2: " + string(kick_2) + "#"
-    + "kick_3: " + string(kick_3) + "#"
-    + "Generation: " + string(ds_map_find_value(ai_map,"generation")) + "#"
-    + "State: " + string(state)
+    draw_text(draw_x,70,"Player " + string(player) + "#"
+//    + "prob_none: " + string(ds_grid_get(ai_grid,0,state)) + "#"
+//    + "prob_punch: " + string(ds_grid_get(ai_grid,3,state)) + "#"
+//    + "prob_kick: " + string(ds_grid_get(ai_grid,4,state)) + "#"
+//    + "prob_forward: " + string(ds_grid_get(ai_grid,2,state)) + "#"
+//    + "prob_back: " + string(ds_grid_get(ai_grid,1,state)) + "#"
+//    + "prob_block: " + string(ds_grid_get(ai_grid,5,state)) + "#"
+//    + "prob_jump: " + string(ds_grid_get(ai_grid,6,state)) + "#"
+//    + "prob_special: " + string(ds_grid_get(ai_grid,7,state)) + "##"
+    + "instance: " + string(global.ai_training_instance) + "#"
+    + "Generation: " + string(global.ai_training_generation) + "#"
+//    + "State: " + string(state)
     );
 }
 
-if(!is_undefined(ai_grid)) {
-    var draw_x;
-    var player;
-    if(self.id==controller_obj[0]) {
-        draw_x=10;
-        player = 1;
-    } else {
-        draw_x=850;
-        player = 2;
-    }
-    draw_text(draw_x,40,"Player " + string(player) + "#"
-    + "prob_none: " + string(ds_grid_get(ai_grid,0,state)) + "#"
-    + "prob_punch: " + string(ds_grid_get(ai_grid,3,state)) + "#"
-    + "prob_kick: " + string(ds_grid_get(ai_grid,4,state)) + "#"
-    + "prob_forward: " + string(ds_grid_get(ai_grid,2,state)) + "#"
-    + "prob_back: " + string(ds_grid_get(ai_grid,1,state)) + "#"
-    + "prob_block: " + string(ds_grid_get(ai_grid,5,state)) + "#"
-    + "prob_jump: " + string(ds_grid_get(ai_grid,6,state)) + "#"
-    + "prob_special: " + string(ds_grid_get(ai_grid,7,state)) + "##"
-    + "instance: " + string(global.ai_training_instance) + "#"
-    + "Generation: " + string(global.ai_training_generation) + "#"
-    + "State: " + string(state)
-    );
-}
 </string>
           </argument>
         </arguments>

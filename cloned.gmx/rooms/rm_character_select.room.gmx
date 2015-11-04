@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_charselect_jibbers" x="256" y="448" name="inst_50C24A8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_training" x="864" y="704" name="inst_D213E2DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_charselect_wukong" x="480" y="448" name="inst_AF7FA62B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

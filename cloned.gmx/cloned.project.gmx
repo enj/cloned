@@ -117,7 +117,9 @@
     </objects>
     <objects name="Character Select">
       <object>objects\obj_charselect_jibbers</object>
+      <object>objects\obj_charselect</object>
       <object>objects\obj_training</object>
+      <object>objects\obj_charselect_wukong</object>
     </objects>
     <objects name="Vs">
       <object>objects\obj_vs_slider_left</object>
