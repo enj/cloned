@@ -72,7 +72,6 @@
     <script>scripts\script_set_controller.gml</script>
     <script>scripts\script_player_load.gml</script>
     <script>scripts\script_start_fight_room.gml</script>
-    <script>scripts\script_draw_health.gml</script>
     <scripts name="Player Actions">
       <script>scripts\script_kick.gml</script>
       <script>scripts\script_punch.gml</script>
@@ -92,6 +91,11 @@
       <script>scripts\script_get_state.gml</script>
       <script>scripts\script_pick_action_by_state.gml</script>
       <script>scripts\script_new_mating_helper.gml</script>
+    </scripts>
+    <scripts name="Bars">
+      <script>scripts\script_draw_health.gml</script>
+      <script>scripts\script_draw_energy.gml</script>
+      <script>scripts\script_change_bars.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

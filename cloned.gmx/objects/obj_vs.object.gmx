@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>created_slider=false;
-vs_scale=1;
+vs_scale=5;
 vs_steps=7;
-vs_step_size=(vs_scale-1)/vs_steps;
+vs_step_size=1; //(vs_scale-1)/vs_steps;
 //instance_create(1024,768,obj_vs_slider_right);
 </string>
           </argument>

@@ -44,7 +44,8 @@ punch_damage=8;
 kick_damage=12;
 max_hp=120;
 hp=120;
-
+max_mp=170
+mp = floor(max_mp / 2)
 
 </string>
           </argument>
