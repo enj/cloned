@@ -1,7 +1,7 @@
 
-fighter_obj[0] = instance_create(150,700,obj_fighter);
+fighter_obj[0] = instance_create((room_width/2-362),700,obj_fighter);
 script_player_load(fighter_obj[0],player1);
-fighter_obj[1] = instance_create(874,700,obj_fighter);
+fighter_obj[1] = instance_create((room_width/2+362),700,obj_fighter);
 script_player_load(fighter_obj[1],player2);
 fighter_obj[0].opponent=fighter_obj[1];
 fighter_obj[1].opponent=fighter_obj[0];
