@@ -133,7 +133,11 @@
       <script>scripts\script_vs_step.gml</script>
       <script>scripts\script_vs_draw.gml</script>
     </scripts>
+    <script>scripts\script_draw_stroked_text.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_winner</font>
+  </fonts>
   <objects name="objects">
     <objects name="Fighters">
       <object>objects\obj_fighter</object>
