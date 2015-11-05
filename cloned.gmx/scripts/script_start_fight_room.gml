@@ -27,4 +27,5 @@ if(global.training_mode) {
     room_speed=30;
 }
 
+instance_create(0,384,obj_view_follow);
 instance_create(0,0,obj_referee);
