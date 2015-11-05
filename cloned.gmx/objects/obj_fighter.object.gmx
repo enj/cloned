@@ -170,22 +170,20 @@ if((facing_right == (opponent.x &lt; x))) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(attacking==true) {
-    attacking = false;
+            <string>if(blocking==true) {
+    image_speed=0;
+} else {
     sprite_index=sprite_standing;
-    depth=-1;
-    opponent.depth=0;
 }
 
-if(blocking==true) {
-    image_speed=0;
+if(attacking==true) {
+    attacking = false;
+    depth=-1;
+    opponent.depth=0;
 }
 
 if(image_speed&lt;0) {
     image_speed = base_image_speed;
-    sprite_index=sprite_standing;
-    depth=-1;
-    opponent.depth=0;
 }
 </string>
           </argument>
