@@ -70,9 +70,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\script_set_controller.gml</script>
-    <script>scripts\script_player_load.gml</script>
-    <script>scripts\script_start_fight_room.gml</script>
     <scripts name="Player Actions">
       <script>scripts\script_kick.gml</script>
       <script>scripts\script_punch.gml</script>
@@ -99,6 +96,43 @@
       <script>scripts\script_draw_energy.gml</script>
       <script>scripts\script_change_bars.gml</script>
     </scripts>
+    <scripts name="Fighter">
+      <script>scripts\script_fighter_animation_end.gml</script>
+      <script>scripts\script_fighter_step.gml</script>
+      <script>scripts\script_fighter_begin_step.gml</script>
+      <script>scripts\script_hitbox_step.gml</script>
+    </scripts>
+    <scripts name="Loading and Control">
+      <script>scripts\script_music_room_start.gml</script>
+      <script>scripts\script_start_fight_room.gml</script>
+      <script>scripts\script_player_load.gml</script>
+      <script>scripts\script_set_controller.gml</script>
+      <script>scripts\script_globals.gml</script>
+      <script>scripts\script_charselect_click.gml</script>
+      <script>scripts\script_training_click.gml</script>
+    </scripts>
+    <scripts name="Referee">
+      <script>scripts\script_referee_step.gml</script>
+      <script>scripts\script_referee_alarm0.gml</script>
+      <script>scripts\script_referee_draw.gml</script>
+    </scripts>
+    <scripts name="Controllers">
+      <script>scripts\script_player_controller_step.gml</script>
+      <script>scripts\script_player_controller_create.gml</script>
+      <script>scripts\script_ai_controller_create.gml</script>
+      <script>scripts\script_ai_controller_step.gml</script>
+      <script>scripts\script_ai_controller_draw.gml</script>
+    </scripts>
+    <scripts name="Vs">
+      <script>scripts\script_vs_slider_left_create.gml</script>
+      <script>scripts\script_vs_slider_left_step.gml</script>
+      <script>scripts\script_vs_slider_right.gml</script>
+      <script>scripts\script_vs_slider_right_alarm0.gml</script>
+      <script>scripts\script_vs_slider_right_step.gml</script>
+      <script>scripts\script_vs_create.gml</script>
+      <script>scripts\script_vs_step.gml</script>
+      <script>scripts\script_vs_draw.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Fighters">
@@ -117,12 +151,12 @@
       <object>objects\obj_arcade_mode</object>
       <object>objects\obj_vs_mode</object>
       <object>objects\obj_room_speed</object>
+      <object>objects\obj_training</object>
     </objects>
     <objects name="Character Select">
       <object>objects\obj_charselect_jibbers</object>
-      <object>objects\obj_charselect</object>
-      <object>objects\obj_training</object>
       <object>objects\obj_charselect_wukong</object>
+      <object>objects\obj_charselect</object>
     </objects>
     <objects name="Vs">
       <object>objects\obj_vs_slider_left</object>

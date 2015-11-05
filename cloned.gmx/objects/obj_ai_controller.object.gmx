@@ -11,27 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>event_inherited();
-is_ai=true;
-fighter=obj_fighter;
-step=0;
-ai_grid=undefined;
-state=0;
-</string>
+            <kind>9</kind>
+            <script>script_ai_controller_create</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -39,27 +53,41 @@ state=0;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if(run_step &amp;&amp; step%5==0) {
-    hspeed = 0;
-    script_ai_decide();
-    step=0;
-}
-step++;
-</string>
+            <kind>9</kind>
+            <script>script_ai_controller_step</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -67,47 +95,41 @@ step++;
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>
-if(false &amp;&amp; !is_undefined(ai_grid)) {
-    var draw_x;
-    var player;
-    if(self.id==controller_obj[0]) {
-        draw_x=10;
-        player = 1;
-    } else {
-        draw_x=850;
-        player = 2;
-    }
-    draw_text(draw_x,70,"Player " + string(player) + "#"
-//    + "prob_none: " + string(ds_grid_get(ai_grid,0,state)) + "#"
-//    + "prob_punch: " + string(ds_grid_get(ai_grid,3,state)) + "#"
-//    + "prob_kick: " + string(ds_grid_get(ai_grid,4,state)) + "#"
-//    + "prob_forward: " + string(ds_grid_get(ai_grid,2,state)) + "#"
-//    + "prob_back: " + string(ds_grid_get(ai_grid,1,state)) + "#"
-//    + "prob_block: " + string(ds_grid_get(ai_grid,5,state)) + "#"
-//    + "prob_jump: " + string(ds_grid_get(ai_grid,6,state)) + "#"
-//    + "prob_special: " + string(ds_grid_get(ai_grid,7,state)) + "##"
-    + "instance: " + string(global.ai_training_instance) + "#"
-    + "Generation: " + string(global.ai_training_generation) + "#"
-//    + "State: " + string(state)
-    );
-}
-
-</string>
+            <kind>9</kind>
+            <script>script_ai_controller_draw</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

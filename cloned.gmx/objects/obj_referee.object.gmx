@@ -109,45 +109,41 @@
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>var inc_generation = false;
-if(controller_obj[0].is_ai) {
-    script_ai_fitness(fighter_obj[0], global.p1_ai_array, 0);
-    if(global.ai_training_instance==array_length_1d(global.p1_ai_array)-1) {
-        global.p1_ai_array = script_mate_ai(0);
-        inc_generation=true;
-    }
-}
-if(controller_obj[1].is_ai) {
-    script_ai_fitness(fighter_obj[1], global.p2_ai_array, 1);
-    if(global.ai_training_instance==array_length_1d(global.p2_ai_array)-1) {
-        global.p2_ai_array = script_mate_ai(1);
-        incinc_generation_gen=true;
-    }
-}
-
-if(inc_generation) {
-    global.ai_training_instance=0;
-    global.ai_training_generation++;
-}
-
-global.ai_training_instance++;
-global.ai_training_total++;
-
-</string>
+            <kind>9</kind>
+            <script>script_referee_alarm0</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -169,47 +165,41 @@ global.ai_training_total++;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>step++;
-if(!declared_winner &amp;&amp; step&gt;=900) {
-//    fighter_obj[0].hp=0
-//    fighter_obj[1].hp=0
-    declared_winner=true;
-    alarm[0]=60;
-}
-
-if(fighter_obj[0].hp&lt;=0) {
-    controller_obj[0].run_step = false;
-    controller_obj[1].run_step = false;
-    if(!declared_winner) {
-        declared_winner=true;
-        winner_message = fighter_obj[1].fighter_name + " Wins!";
-        alarm[0]=60;
-    }
-} else if(fighter_obj[1].hp&lt;=0) {
-    controller_obj[0].run_step = false;
-    controller_obj[1].run_step = false;
-    if(!declared_winner) {
-        declared_winner=true;
-        winner_message = fighter_obj[0].fighter_name + " Wins!";
-        alarm[0]=60;
-    }
-}
-
-</string>
+            <kind>9</kind>
+            <script>script_referee_step</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -217,22 +207,41 @@ if(fighter_obj[0].hp&lt;=0) {
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>draw_text(470,20,string(30-step/30));
-</string>
+            <kind>9</kind>
+            <script>script_referee_draw</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

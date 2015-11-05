@@ -60,26 +60,41 @@ hp=100;
     <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>// Check collisions and stop movement
-if (1) {
-    if (place_meeting(x+hspeed,y,opponent)) hspeed=0;
-    if (place_meeting(x,y+vspeed,opponent)) vspeed=0;
-}
-</string>
+            <kind>9</kind>
+            <script>script_fighter_begin_step</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -87,42 +102,41 @@ if (1) {
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>// Controls
-
-// Check collisions and stop movement
-//if (1) {
-//    if (place_meeting(x+hspeed,y,opponent)) hspeed=0;
-//    if (place_meeting(x,y+vspeed,opponent)) vspeed=0;
-//}
-
-// Player death
-if(hp&lt;=0) {
-    hp=0;
-//    mask_index=spr_empty;
-}
-
-// Swap facing direction
-if((facing_right == (opponent.x &lt; x))) {
-    image_xscale*=-1;
-    facing_right = !facing_right;
-}
-
-
-</string>
+            <kind>9</kind>
+            <script>script_fighter_step</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -156,9 +170,9 @@ if((facing_right == (opponent.x &lt; x))) {
     <event eventtype="7" enumb="50">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -170,9 +184,35 @@ if((facing_right == (opponent.x &lt; x))) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x=xprevious;
-y=yprevious;
-</string>
+            <string>x</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>xprevious</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>yprevious</string>
           </argument>
         </arguments>
       </action>
@@ -180,36 +220,41 @@ y=yprevious;
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if(blocking==true) {
-    image_speed=0;
-} else {
-    sprite_index=sprite_standing;
-}
-
-if(attacking==true) {
-    attacking = false;
-    depth=-1;
-    opponent.depth=0;
-}
-
-if(image_speed&lt;0) {
-    image_speed = base_image_speed;
-}
-</string>
+            <kind>9</kind>
+            <script>script_fighter_animation_end</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
