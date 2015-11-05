@@ -6,7 +6,9 @@ var bar_direction = 0; // 0 = left, 1 = right, 2 = top, 3 = bottom
 var width = 400;
 if (opponent == fighter_obj[0]) {
     bar_direction = 1;
-    x1 = display_get_gui_width() - 50 - width - x1; //TODO this needs work
+//    x1 = display_get_gui_width() - 50 - width - x1; //TODO this needs work
+    var scale = (window_get_height() / view_hview[0]);
+    x1 = view_wview[0]*scale-width-x1; //This seems to work
 }
 
 // Health bar vars
