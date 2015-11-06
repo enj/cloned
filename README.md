@@ -27,7 +27,7 @@ It will be awesome :)
   * Special: (not implemented)
 
 
-Resources
+##Resources:
 Featuring Music by Matthew Pablo (Blackmoor Tides)    
 http://www.matthewpablo.com  
 Used with explicit permission  
