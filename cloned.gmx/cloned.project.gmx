@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\mus_jibbers</sound>
     <sound>sound\mus_bahamut</sound>
+    <sound>sound\snd_cannon</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_empty</sprite>
@@ -63,6 +64,9 @@
       <sprite>sprites\spr_vs</sprite>
     </sprites>
     <sprite>sprites\spr_training</sprite>
+    <sprite>sprites\spr_cannonball</sprite>
+    <sprite>sprites\spr_cannonball_explosion</sprite>
+    <sprite>sprites\spr_full</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_jibbers</background>
@@ -90,11 +94,12 @@
       <script>scripts\script_get_state.gml</script>
       <script>scripts\script_pick_action_by_state.gml</script>
       <script>scripts\script_new_mating_helper.gml</script>
+      <script>scripts\script_default_ai_grid.gml</script>
     </scripts>
     <scripts name="Bars">
       <script>scripts\script_draw_health.gml</script>
       <script>scripts\script_draw_energy.gml</script>
-      <script>scripts\script_change_bars.gml</script>
+      <script>scripts\script_do_damage.gml</script>
     </scripts>
     <scripts name="Fighter">
       <script>scripts\script_fighter_animation_end.gml</script>
@@ -145,11 +150,13 @@
       <object>objects\obj_jibbers</object>
       <object>objects\obj_wukong</object>
       <object>objects\obj_view_follow</object>
+      <object>objects\obj_special_jibbers</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_music</object>
       <object>objects\obj_globals</object>
       <object>objects\obj_referee</object>
+      <object>objects\obj_ground</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_arcade_mode</object>
@@ -172,6 +179,8 @@
       <object>objects\obj_player_controller</object>
       <object>objects\obj_ai_controller</object>
     </objects>
+    <object>objects\obj_cannonball</object>
+    <object>objects\obj_explosion</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>

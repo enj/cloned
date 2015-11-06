@@ -1,5 +1,8 @@
 if(run_step) {
     fighter.hspeed = 0;
+    if(keyboard_check_pressed(key_special) || gamepad_button_check_pressed(controller_num, pad_special)) {
+        script_execute(script_special_attack, fighter);
+    }
     if(keyboard_check_pressed(key_punch) || gamepad_button_check_pressed(controller_num, pad_punch)) {
         script_execute(script_punch, fighter);    
     }

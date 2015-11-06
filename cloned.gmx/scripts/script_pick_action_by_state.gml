@@ -4,18 +4,18 @@ var ai_grid = controller_obj[argument2-1].ai_grid;
 
 var sum=0;
 var action="none";
-for(i=0;i<ds_grid_width(ai_grid)-2;i++){
+for(i=0;i<ds_grid_width(ai_grid);i++){
     sum+=ds_grid_get(ai_grid, i, state);
 }
 
 var r=random(sum);
 sum=0;
 var pick;
-for(pick=0;pick<ds_grid_width(ai_grid)-2;pick++){
+for(pick=0;pick<ds_grid_width(ai_grid);pick++){
+    sum+=ds_grid_get(ai_grid, pick, state);
     if(sum>r) {
         break;
     }
-    sum+=ds_grid_get(ai_grid, pick, state);
 }
 
 if(fighter.blocking && pick!=5) {

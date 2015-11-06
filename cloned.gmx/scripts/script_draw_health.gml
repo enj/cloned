@@ -36,4 +36,5 @@ draw_healthbar(x1, y1, x2, y2, amount, bg_color, dead_color, full_color, bar_dir
 
 script_draw_stroked_text(fighter_name, name_pos, y2-5, .3, c_yellow, c_orange, halign, fa_top, 2);
 
-draw_text(x1, y1, string(global.wins[player]));
+
+if(global.training_mode)draw_text(x1, y1, string(global.wins[player]));

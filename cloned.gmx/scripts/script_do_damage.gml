@@ -12,7 +12,7 @@ switch(type) {
         damage = attacker.kick_damage;
         break;
     case "special":
-        damage = attacker.punch_damage;
+        damage = attacker.special_damage;
         break;
     default:
         damage = 0;

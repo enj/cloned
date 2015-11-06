@@ -44,6 +44,7 @@ punch_range=325;
 kick_range=120;
 punch_damage=7;
 kick_damage=15;
+special_damage=0;
 max_hp=100;
 hp=100;
 max_mp = 150

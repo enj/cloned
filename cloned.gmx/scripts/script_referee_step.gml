@@ -1,4 +1,4 @@
-step++;
+if(!declared_winner) step++;
 if(!declared_winner && step>=900) {
     controller_obj[0].run_step = false;
     controller_obj[1].run_step = false;

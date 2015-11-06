@@ -18,7 +18,7 @@ var e_canHit = (opp_range>separation);
 var e_isAttacking = opponent.attacking;
 var i_canKick = (my_kick_range>separation);
 var i_canPunch = (my_punch_range>separation);
-var i_haveSpecial = false;
+var i_haveSpecial = (fighter.mp==fighter.max_mp);
 
 state = script_get_state(e_canHit, e_isAttacking, i_canKick, i_canPunch, i_haveSpecial);
 

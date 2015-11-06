@@ -8,6 +8,8 @@ pad_jump  = gp_axislv;
 pad_punch = gp_face3;
 pad_kick  = gp_face1;
 pad_block = gp_face4;
+pad_special = gp_shoulderrb;
+
 // Pick Controller
 script_set_controller(self);
 
@@ -22,6 +24,7 @@ if(self.id==controller_obj[0].id) {
         key_punch = vk_control;
         key_kick  = vk_space;
         key_block = ord('Z');
+        key_special = ord('X');
     }
 }
 
@@ -35,6 +38,7 @@ if(self.id==controller_obj[1].id) {
         key_punch = ord('P');
         key_kick  = ord('O');
         key_block = ord('I');
+        key_special = ord('U');
     }
 }
 
