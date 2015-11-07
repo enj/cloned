@@ -171,7 +171,7 @@ ds_grid_set(temp_grid, 5, 15, 5); // Block
 ds_grid_set(temp_grid, 6, 15, 2); // Jump
 ds_grid_set(temp_grid, 7, 15, 0); // Special
 
-// Copy each of the first 15 states, into the same state but with special available. Set special probability to 5;
+// Copy each of the first 16 states, into the same state but with special available. Set special probability to 5;
 for(var i=0;i<ds_grid_height(temp_grid)/2;i++) {
     for(var j=0;j<ds_grid_width(temp_grid)-1;j++) {
         ds_grid_set(temp_grid, j, i+16, ds_grid_get(temp_grid, j, i)); 

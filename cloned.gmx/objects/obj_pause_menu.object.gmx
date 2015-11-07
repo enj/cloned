@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>global.pause=true;
+step=0;
 depth=-10000;
 options[0]="Continue";
 options[1]="Main Menu";
@@ -57,13 +58,21 @@ pane_y = view_yview[0]+view_hview[0]/2-pane_height/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(vk_down) || gamepad_axis_value(controller, gp_axislv)&gt;.8) {
+            <string>
+if(step&lt;6) {
+    step++
+    exit;
+}
+
+if(keyboard_check(vk_down) || gamepad_axis_value(controller, gp_axislv)&gt;.8) {
     if(selected&lt;array_length_1d(options)-1) selected++;
+    step=0;
 }
 if(keyboard_check(vk_up) || gamepad_axis_value(controller, gp_axislv)&lt;-.8) {
     if(selected&gt;0) selected--;
+    step=0;
 }
-if(keyboard_check(vk_enter) || gamepad_button_check(controller, gp_face1)) {
+if(keyboard_check(vk_enter) || gamepad_button_check_pressed(controller, gp_face1)) {
     if(options[selected]=="Continue") {
         global.pause = false;
         instance_destroy();

@@ -35,19 +35,25 @@ sprite_blocking = spr_wukong_block;
 mask_punching   = mask_wukong_punch;
 mask_kicking    = mask_wukong_kick;
 sprite_index = sprite_standing;
+
+// Sprite stuff
 image_xscale=1;
 image_yscale=1;
 player_speed = 8;
 base_image_speed=0.3;
-image_speed = 0.3;
+image_speed = base_image_speed;
 punch_range=325;
 kick_range=120;
 mask_offset=107;
+
+// Damages
 punch_damage=7;
 kick_damage=15;
 special_damage=0;
-max_hp=100;
-hp=100;
+
+// Stats
+max_hp=240;
+hp=max_hp;
 max_mp = 150
 mp = floor(max_mp / 2)
 

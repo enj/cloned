@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.training_mode) room_speed=30;
-else room_speed=10000;
+            <string>if(global.training_speed==10000) global.training_speed=30;
+else global.training_speed=10000;
 
-global.training_mode = !global.training_mode;
+room_speed=global.training_speed;
 </string>
           </argument>
         </arguments>

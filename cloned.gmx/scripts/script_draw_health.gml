@@ -22,7 +22,7 @@ var y1 = 10;
 var height = 25;
 var bg_color = c_black;
 var dead_color = c_red;
-var full_color = c_green;
+var full_color = c_lime;
 var show_bg = true;
 var show_border = true;
 //var max_hp = 100; //TODO move elsewhere
@@ -34,6 +34,7 @@ var amount = (hp / max_hp) * 100;
 
 draw_healthbar(x1, y1, x2, y2, amount, bg_color, dead_color, full_color, bar_direction, show_bg, show_border);
 
+// Draw character name
 script_draw_stroked_text(fighter_name, name_pos, y2-5, .3, c_yellow, c_orange, halign, fa_top, 2);
 
 

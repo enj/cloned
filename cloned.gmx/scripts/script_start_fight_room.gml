@@ -30,7 +30,7 @@ with(controller_obj[1]) {
 }
 
 if(global.training_mode) {
-    room_speed=10000;
+    room_speed=global.training_speed;
 } else {
     room_speed=30;
 }

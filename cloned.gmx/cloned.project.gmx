@@ -197,6 +197,7 @@
     <object>objects\obj_explosion</object>
     <object>objects\obj_pause_menu</object>
     <object>objects\obj_retry_menu</object>
+    <object>objects\obj_main_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>

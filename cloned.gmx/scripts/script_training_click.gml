@@ -1,6 +1,8 @@
 global.player1="wukong";
 global.player2="jibbers";
 
+global.training_speed = 10000;
+
 with(controller_obj[0]) instance_change(obj_ai_controller, true);
 with(controller_obj[1]) instance_change(obj_ai_controller, true);
 
