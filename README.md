@@ -15,7 +15,8 @@ It will be awesome :)
   * Kick:    Space
   * Jump:    Up Arrow (not implemented)
   * Block:   Z
-  * Special: (not implemented)
+  * Special: X
+  * Pause: Esc
 
 ##Game Pad Controls:
   * Right:   Left analog stick right
@@ -24,7 +25,8 @@ It will be awesome :)
   * Kick:    A
   * Jump:    Left analog stick up (not implemented)
   * Block:   Y
-  * Special: (not implemented)
+  * Special: Right Trigger
+  * Pause: Start
 
 
 ##Resources:
