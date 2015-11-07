@@ -1,3 +1,5 @@
+if(global.pause) exit;
+
 // Player death
 if(hp<=0) {
     hp=0;

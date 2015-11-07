@@ -4,6 +4,16 @@ if(global.training_mode) {
 }
 
 if(global.mode=="arcade") {
+    if(room!=rm_character_select && global.wins[0]<2) {
+        if(global.wins[1]==2) {
+            script_continue()
+            exit;
+        }
+        room_restart();
+        exit;
+    }
+    global.wins[0]=0;
+    global.wins[1]=0;
     if(ds_list_size(global.fighter_list) > 0) {
         global.player2=ds_list_find_value(global.fighter_list,0);
         global.stage=ds_list_find_value(global.fighter_list,0);

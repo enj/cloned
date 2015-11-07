@@ -9,6 +9,7 @@ pad_punch = gp_face3;
 pad_kick  = gp_face1;
 pad_block = gp_face4;
 pad_special = gp_shoulderrb;
+pad_pause = gp_start;
 
 // Pick Controller
 script_set_controller(self);
@@ -25,6 +26,7 @@ if(self.id==controller_obj[0].id) {
         key_kick  = vk_space;
         key_block = ord('Z');
         key_special = ord('X');
+        key_pause = vk_escape;
     }
 }
 
@@ -39,6 +41,7 @@ if(self.id==controller_obj[1].id) {
         key_kick  = ord('O');
         key_block = ord('I');
         key_special = ord('U');
+        key_pause = vk_escape;
     }
 }
 

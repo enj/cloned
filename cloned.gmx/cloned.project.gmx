@@ -126,6 +126,7 @@
       <script>scripts\script_charselect_click.gml</script>
       <script>scripts\script_training_click.gml</script>
       <script>scripts\script_room_select.gml</script>
+      <script>scripts\script_continue.gml</script>
     </scripts>
     <scripts name="Referee">
       <script>scripts\script_referee_step.gml</script>
@@ -194,6 +195,8 @@
     </objects>
     <object>objects\obj_cannonball</object>
     <object>objects\obj_explosion</object>
+    <object>objects\obj_pause_menu</object>
+    <object>objects\obj_retry_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>

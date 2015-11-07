@@ -1,3 +1,5 @@
+if(global.pause) exit;
+
 // Check collisions and stop movement
 if (1) {
     if (place_meeting(x+hspeed,y,opponent)) hspeed=0;

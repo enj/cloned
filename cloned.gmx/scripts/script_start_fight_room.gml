@@ -38,3 +38,5 @@ if(global.training_mode) {
 instance_create(0,384,obj_view_follow);
 instance_create(0,0,obj_ground);
 instance_create(0,0,obj_referee);
+
+

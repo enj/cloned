@@ -4,6 +4,9 @@ used_controllers[1] = false;
 used_controllers[2] = false;
 used_controllers[3] = false;
 
+globalvar pause;
+pause=false;
+
 globalvar player1; //Name of character
 globalvar player2; //Name of character
 globalvar stage;   //Name of stage

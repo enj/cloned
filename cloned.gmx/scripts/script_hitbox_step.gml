@@ -1,3 +1,5 @@
+if(global.pause) exit;
+
 x=(caller).x;
 y=(caller).y;
 image_index=(caller).image_index;

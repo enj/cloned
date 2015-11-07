@@ -1,5 +1,12 @@
+if(global.pause) exit;
+
 if(run_step) {
     fighter.hspeed = 0;
+    if(keyboard_check_pressed(key_pause) || gamepad_button_check_pressed(controller_num, pad_pause)) {
+        var o = instance_create(0,0,obj_pause_menu);
+        o.controller=controller_num;
+    }
+    
     if(keyboard_check_pressed(key_special) || gamepad_button_check_pressed(controller_num, pad_special)) {
         script_execute(script_special_attack, fighter);
     }
