@@ -1,6 +1,7 @@
 var opponent=fighter.opponent;
 var separation=abs(opponent.x-fighter.x);
-separation = separation - (sprite_get_width(opponent.image_index)+sprite_get_xoffset(opponent.image_index))
+//separation = separation - (sprite_get_width(opponent.image_index)+sprite_get_xoffset(opponent.image_index))
+separation = separation - opponent.mask_offset;
 
 var player=-1;
 if(fighter==fighter_obj[0]) player=1 else player=2;

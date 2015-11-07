@@ -37,6 +37,10 @@
       <sprite>sprites\spr_panda_walking</sprite>
       <sprite>sprites\spr_panda_kick</sprite>
       <sprite>sprites\spr_panda_punch</sprite>
+      <sprites name="Masks">
+        <sprite>sprites\mask_panda_punch</sprite>
+        <sprite>sprites\mask_panda_kick</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bahamut">
       <sprite>sprites\spr_bahamut_standing</sprite>
@@ -55,11 +59,17 @@
       <sprite>sprites\spr_cassandra_walking</sprite>
       <sprite>sprites\spr_cassandra_kick</sprite>
       <sprite>sprites\spr_cassandra_punch</sprite>
+      <sprites name="Masks">
+        <sprite>sprites\mask_cassandra_punch</sprite>
+        <sprite>sprites\mask_cassandra_kick</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_arcade_mode</sprite>
     <sprite>sprites\spr_vs_mode</sprite>
     <sprites name="Vs">
       <sprite>sprites\spr_vs_jibbers</sprite>
+      <sprite>sprites\spr_vs_panda</sprite>
+      <sprite>sprites\spr_vs_cassandra</sprite>
       <sprite>sprites\spr_vs_wukong</sprite>
       <sprite>sprites\spr_vs</sprite>
     </sprites>
@@ -115,6 +125,7 @@
       <script>scripts\script_globals.gml</script>
       <script>scripts\script_charselect_click.gml</script>
       <script>scripts\script_training_click.gml</script>
+      <script>scripts\script_room_select.gml</script>
     </scripts>
     <scripts name="Referee">
       <script>scripts\script_referee_step.gml</script>
@@ -148,6 +159,8 @@
       <object>objects\obj_fighter</object>
       <object>objects\obj_hitbox</object>
       <object>objects\obj_jibbers</object>
+      <object>objects\obj_panda</object>
+      <object>objects\obj_cassandra</object>
       <object>objects\obj_wukong</object>
       <object>objects\obj_view_follow</object>
       <object>objects\obj_special_jibbers</object>
@@ -187,6 +200,8 @@
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_jibbers</room>
+    <room>rooms\rm_panda</room>
+    <room>rooms\rm_cassandra</room>
     <room>rooms\rm_wukong</room>
     <room>rooms\rm_training</room>
     <room>rooms\rm_pxndx</room>

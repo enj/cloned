@@ -6,10 +6,13 @@ if(room!=last_room) {
             audio_play_sound(mus_jibbers, 0, true);
             break;
         case rm_wukong:
-            audio_play_sound(mus_wukong, 0, true);
+            audio_play_sound(mus_bahamut, 0, true);
+            break;
+        case rm_cassandra:
+            audio_play_sound(mus_bahamut, 0, true);
             break;
         case rm_pxndx:
-            audio_play_sound(mus_pxndx, 0, true);
+            audio_play_sound(mus_bahamut, 0, true);
             break;
         case rm_bahamut:
             audio_play_sound(mus_bahamut, 0, true);

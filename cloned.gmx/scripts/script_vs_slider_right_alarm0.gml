@@ -9,7 +9,7 @@ switch(global.stage) {
         room_goto(rm_panda);
         break;
     case "cassandra":
-        room_goto(rm_casandra);
+        room_goto(rm_cassandra);
         break;
     case "bahamut":
         room_goto(rm_bahamut);

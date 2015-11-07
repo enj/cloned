@@ -10,8 +10,13 @@ switch(player2) {
         scale=1;
         break;
     case "panda":
+        sprite_index=spr_vs_panda;
         break;
     case "cassandra":
+        sprite_index=spr_vs_cassandra;
+        break;
+    case "bahamut":
+        sprite_index=spr_vs_bahamut;
         break;
 }
 image_xscale=-scale;

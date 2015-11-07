@@ -23,3 +23,6 @@ if(global.training_mode) {
     global.ai_training_instance++;
     global.ai_training_total++;
 }
+
+script_room_select();
+
