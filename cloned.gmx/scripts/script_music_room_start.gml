@@ -1,22 +1,56 @@
-if(room!=last_room) {
-    audio_stop_all()
-    last_room=room;
+//if(room!=last_room) {
+//    audio_stop_all();
+//    last_room=room;
     switch room {
         case rm_jibbers:
-            audio_play_sound(mus_jibbers, 0, true);
+            if(global.current_song!="jibbers") {
+                global.current_song="jibbers";
+                audio_stop_all();
+                audio_play_sound(mus_jibbers, 10, true);
+            }
             break;
         case rm_wukong:
-            audio_play_sound(mus_bahamut, 0, true);
+            if(global.current_song!="jibbers") {
+                global.current_song="jibbers";
+                audio_stop_all();
+                audio_play_sound(mus_jibbers, 10, true);
+            }
             break;
         case rm_cassandra:
-            audio_play_sound(mus_bahamut, 0, true);
+            if(global.current_song!="jibbers") {
+                global.current_song="jibbers";
+                audio_stop_all();
+                audio_play_sound(mus_jibbers, 10, true);
+            }
             break;
-        case rm_pxndx:
-            audio_play_sound(mus_bahamut, 0, true);
+        case rm_panda:
+            if(global.current_song!="jibbers") {
+                global.current_song="jibbers";
+                audio_stop_all();
+                audio_play_sound(mus_jibbers, 10, true);
+            }
             break;
         case rm_bahamut:
-            audio_play_sound(mus_bahamut, 0, true);
+            if(global.current_song!="bahamut") {
+                global.current_song="bahamut";
+                audio_stop_all();
+                audio_play_sound(mus_bahamut, 10, true);
+            }
+            break;
+        case rm_mainMenu:
+            if(global.current_song!="main") {
+                global.current_song="main";
+                audio_stop_all();
+                audio_play_sound(mus_main, 10, true);
+            }
+            break;
+        case rm_character_select:
+            if(global.current_song!="main") {
+                global.current_song="main";
+                audio_stop_all();
+                audio_play_sound(mus_main, 10, true);
+            }
             break;
     }   
-}
+//}
 

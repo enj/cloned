@@ -10,5 +10,3 @@ if(player==0) global.ai_fitness_1[ai_training_instance] = fitness;
 if(player==1) global.ai_fitness_2[ai_training_instance] = fitness;
 
 
-if(fitness>0) global.wins[fighter.player]++;
-

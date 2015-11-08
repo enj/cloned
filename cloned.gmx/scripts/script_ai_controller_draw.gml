@@ -20,7 +20,7 @@ if(global.training_mode && !is_undefined(ai_grid)) {
 //    + "prob_special: " + string(ds_grid_get(ai_grid,7,state)) + "##"
     + "instance: " + string(global.ai_training_instance) + "#"
     + "Generation: " + string(global.ai_training_generation) + "#"
-    + "State: " + string(state)
+//    + "State: " + string(state)
     );
 }
 

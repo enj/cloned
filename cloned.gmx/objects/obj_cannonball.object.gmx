@@ -113,13 +113,11 @@
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -131,21 +129,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pause) {
-    old_vspeed=vspeed;
-    vspeed=0;
-    exit;
-}
-
-vspeed+=old_vspeed;
-old_vspeed=0;
-
-if(place_meeting(x,y,fighter.opponent)) {
-    var o = instance_create(x,y,obj_explosion);
-    o.fighter = fighter;
-    instance_destroy();
-}
-</string>
+            <string>old_gravity</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -170,6 +158,74 @@ if(place_meeting(x,y,fighter.opponent)) {
           <argument>
             <kind>0</kind>
             <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>saved</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.pause) {
+    if(!saved) {
+        old_vspeed=vspeed;
+        vspeed=0;
+        old_gravity=gravity;
+        gravity=0;
+        saved=true;
+    }
+    exit;
+}
+
+saved=false;
+vspeed+=old_vspeed;
+old_vspeed=0;
+gravity+=old_gravity;
+//gravity+=.05;
+
+if(place_meeting(x,y,fighter.opponent)) {
+    var o = instance_create(x,y,obj_explosion);
+    o.fighter = fighter;
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>

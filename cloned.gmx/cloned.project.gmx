@@ -8,6 +8,7 @@
     <sound>sound\mus_jibbers</sound>
     <sound>sound\mus_bahamut</sound>
     <sound>sound\snd_cannon</sound>
+    <sound>sound\mus_main</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_empty</sprite>
@@ -115,11 +116,11 @@
       <script>scripts\script_hitbox_step.gml</script>
     </scripts>
     <scripts name="Loading and Control">
+      <script>scripts\script_globals.gml</script>
       <script>scripts\script_music_room_start.gml</script>
       <script>scripts\script_start_fight_room.gml</script>
       <script>scripts\script_player_load.gml</script>
       <script>scripts\script_set_controller.gml</script>
-      <script>scripts\script_globals.gml</script>
       <script>scripts\script_arcade_mode.gml</script>
       <script>scripts\script_training_click.gml</script>
       <script>scripts\script_room_select.gml</script>
@@ -200,7 +201,6 @@
     <room>rooms\rm_cassandra</room>
     <room>rooms\rm_wukong</room>
     <room>rooms\rm_training</room>
-    <room>rooms\rm_pxndx</room>
     <room>rooms\rm_bahamut</room>
     <room>rooms\rm_vs</room>
   </rooms>

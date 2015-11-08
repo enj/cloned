@@ -1,5 +1,12 @@
 if(global.pause) exit;
 
+if(global.training_mode) {
+    if(keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
+        var o = instance_create(0,0,obj_pause_menu);
+        o.controller=0;
+    }
+}
+
 if(!round_started) {
     if(!global.training_mode) {
         step++;
@@ -40,6 +47,7 @@ if(!declared_winner && timer<=0) {
         global.wins[1]++;
     }
     alarm[0]=60;
+    exit;
 }
 
 if(fighter_obj[0].hp<=0) {
@@ -62,10 +70,5 @@ if(fighter_obj[0].hp<=0) {
     }
 }
 
-if(global.training_mode) {
-    if(keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-        var o = instance_create(0,0,obj_pause_menu);
-        o.controller=0;
-    }
-}
+
 

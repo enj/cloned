@@ -49,7 +49,7 @@ mask_offset=45;
 // Damages
 punch_damage=8;
 kick_damage=12;
-special_damage=10;
+special_damage=20;
 
 // Stats
 max_hp=300;

@@ -7,6 +7,8 @@ used_controllers[3] = false;
 globalvar pause;
 pause=false;
 
+global.current_song="";
+
 globalvar player1; //Name of character
 globalvar player2; //Name of character
 globalvar stage;   //Name of stage
