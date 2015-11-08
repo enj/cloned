@@ -8,44 +8,192 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="7">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_charselect</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(global.controller_obj[0]) instance_change(obj_player_controller, true);
+
+if(global.mode=="arcade") {
+    with(global.controller_obj[1]) instance_change(obj_ai_controller, true);
+} else {
+    with(global.controller_obj[1]) instance_change(obj_player_controller, true);
+}
+
+p1_pick = undefined;
+p2_pick = undefined;
+p1_index=0;
+p2_index=1;
+p1_step=0;
+p2_step=0;
+
+characters[0]="jibbers";
+characters[1]="wukong";
+characters[2]="panda";
+characters[3]="cassandra";
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>script_charselect_click</script>
+            <kind>1</kind>
+            <string>if(!is_undefined(p1_pick)) {
+    if(global.mode=="arcade") script_arcade_mode();
+    else if(!is_undefined(p2_pick)) script_room_select();
+}
+
+// Player 1
+if(p1_step&gt;=6) {
+if(is_undefined(p1_pick) &amp;&amp; (keyboard_check(controller_obj[0].key_down) || gamepad_axis_value(controller_obj[0].controller_num, gp_axislv)&gt;.8)) {
+    if(floor(p1_index/2)==0) p1_index+=2;
+    p1_step=0;
+}
+if(is_undefined(p1_pick) &amp;&amp; (keyboard_check(controller_obj[0].key_jump) || gamepad_axis_value(controller_obj[0].controller_num, gp_axislv)&lt;-.8)) {
+    if(floor(p1_index/2)==1) p1_index-=2;
+    p1_step=0;
+}
+if(is_undefined(p1_pick) &amp;&amp; (keyboard_check(controller_obj[0].key_left) || gamepad_axis_value(controller_obj[0].controller_num, gp_axislh)&lt;-.8)) {
+    if(p1_index%2==1) p1_index--;
+    p1_step=0;
+}
+if(is_undefined(p1_pick) &amp;&amp; (keyboard_check(controller_obj[0].key_right) || gamepad_axis_value(controller_obj[0].controller_num, gp_axislh)&gt;.8)) {
+    if(p1_index%2==0) p1_index++;
+    p1_step=0;
+}
+if(keyboard_check(controller_obj[0].key_kick) || gamepad_button_check_pressed(controller_obj[0].controller_num, controller_obj[0].pad_kick)) {
+    if(is_undefined(p1_pick)) p1_pick = characters[p1_index];
+    else p1_pick = undefined;
+    global.player1=p1_pick;
+    p1_step=0;
+}
+
+} else p1_step++;
+
+
+if(global.mode == "arcade") exit;
+// Player 2
+if(p2_step&gt;=6) {
+if(is_undefined(p2_pick) &amp;&amp; (keyboard_check(controller_obj[1].key_down) || gamepad_axis_value(controller_obj[1].controller_num, gp_axislv)&gt;.8)) {
+    if(floor(p2_index/2)==0) p2_index+=2;
+    p2_step=0;
+}
+if(is_undefined(p2_pick) &amp;&amp; (keyboard_check(controller_obj[1].key_jump) || gamepad_axis_value(controller_obj[1].controller_num, gp_axislv)&lt;-.8)) {
+    if(floor(p2_index/2)==1) p2_index-=2;
+    p2_step=0;
+}
+if(is_undefined(p2_pick) &amp;&amp; (keyboard_check(controller_obj[1].key_left) || gamepad_axis_value(controller_obj[1].controller_num, gp_axislh)&lt;-.8)) {
+    if(p2_index%2==1) p2_index--;
+    p2_step=0;
+}
+if(is_undefined(p2_pick) &amp;&amp; (keyboard_check(controller_obj[1].key_right) || gamepad_axis_value(controller_obj[1].controller_num, gp_axislh)&gt;.8)) {
+    if(p2_index%2==0) p2_index++;
+    p2_step=0;
+}
+if(keyboard_check(controller_obj[1].key_kick) || gamepad_button_check_pressed(controller_obj[1].controller_num, controller_obj[1].pad_kick)) {
+    if(is_undefined(p2_pick)) p2_pick = characters[p2_index];
+    else p2_pick = undefined;
+    global.player2=p2_pick;
+    p2_step=0;
+}
+
+} else p2_step++;
+
+</string>
           </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>1</kind>
+            <string>draw_sprite_stretched(spr_vs_jibbers, 0, 320, 192, 192, 192);
+draw_sprite_stretched(spr_vs_wukong, 0, 512, 192, 192, 192);
+draw_sprite_stretched(spr_vs_panda, 0, 320, 384, 192, 192);
+draw_sprite_stretched(spr_vs_cassandra, 0, 512, 384, 192, 192);
+
+var color = c_green;
+if(is_undefined(p1_pick)) color = c_red;
+script_draw_stroked_text("P1", 345+(p1_index%2)*192, 365+floor(p1_index/2)*192, .25, color,color,fa_center,fa_center,1);
+
+switch(p1_index) {
+    case 0:
+        draw_sprite_ext(spr_jibbers_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        break;
+    case 1:
+        draw_sprite_ext(spr_wukong_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
+        break;
+    case 2:
+        draw_sprite_ext(spr_panda_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        break;
+    case 3:
+        draw_sprite_ext(spr_cassandra_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        break;
+}
+
+
+if(global.mode=="arcade") exit;
+color = c_green;
+if(is_undefined(p2_pick)) color = c_red;
+script_draw_stroked_text("P2", 487+(p2_index%2)*192, 365+floor(p2_index/2)*192, .25, color,color,fa_center,fa_center,1);
+switch(p2_index) {
+    case 0:
+        draw_sprite_ext(spr_jibbers_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        break;
+    case 1:
+        draw_sprite_ext(spr_wukong_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
+        break;
+    case 2:
+        draw_sprite_ext(spr_panda_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        break;
+    case 3:
+        draw_sprite_ext(spr_cassandra_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        break;
+}
+</string>
           </argument>
         </arguments>
       </action>

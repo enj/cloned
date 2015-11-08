@@ -1,4 +1,8 @@
-if(global.pause) exit;
+if(global.pause) {
+    hspeed=0;
+    vspeed=0;
+    exit;
+}
 
 // Player death
 if(hp<=0) {

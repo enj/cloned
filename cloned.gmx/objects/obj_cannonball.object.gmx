@@ -89,6 +89,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>old_vspeed</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -107,7 +131,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pause) exit;
+            <string>if(global.pause) {
+    old_vspeed=vspeed;
+    vspeed=0;
+    exit;
+}
+
+vspeed+=old_vspeed;
+old_vspeed=0;
 
 if(place_meeting(x,y,fighter.opponent)) {
     var o = instance_create(x,y,obj_explosion);

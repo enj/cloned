@@ -22,6 +22,7 @@ if(self.id==controller_obj[0].id) {
         key_right = vk_right;
         key_left  = vk_left;
         key_jump  = vk_up;
+        key_down  = vk_down;
         key_punch = vk_control;
         key_kick  = vk_space;
         key_block = ord('Z');
@@ -38,6 +39,7 @@ if(self.id==controller_obj[1].id) {
         key_left  = ord('A');
         key_jump  = ord('W');
         key_punch = ord('P');
+        key_down  = ord('S');
         key_kick  = ord('O');
         key_block = ord('I');
         key_special = ord('U');

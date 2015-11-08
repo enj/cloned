@@ -71,7 +71,7 @@ if(keyboard_check(vk_enter) || gamepad_button_check_pressed(controller, gp_face1
         global.pause = false;
         global.wins[0]=0;
         global.wins[1]=0;
-        global.mode="arcade";
+        global.mode="vs";
         room_goto(rm_character_select);
         instance_destroy();
     }

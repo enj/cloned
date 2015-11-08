@@ -1,4 +1,8 @@
-if(global.pause) exit;
+if(global.pause) {
+    hspeed=0;
+    vspeed=0;
+    exit;
+}
 
 // Check collisions and stop movement
 if (1) {

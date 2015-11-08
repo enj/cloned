@@ -1,4 +1,4 @@
-if(global.pause) exit;
+if(global.pause || attacking) exit;
 
 if(run_step) {
     fighter.hspeed = 0;

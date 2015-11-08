@@ -26,4 +26,14 @@ if(global.mode=="arcade") {
     exit;
 }
 
-
+if(global.mode=="vs") {
+    if(room!=rm_character_select && global.wins[0]<2 && global.wins[1]<2) {
+        room_restart();
+        exit;
+    }
+    global.wins[0]=0;
+    global.wins[1]=0;
+    
+    global.stage = (choose("jibbers", "wukong", "cassandra", "panda", "bahamut"));
+    room_goto(rm_vs);
+}
