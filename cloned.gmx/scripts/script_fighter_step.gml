@@ -1,8 +1,15 @@
 if(global.pause) {
     hspeed=0;
     vspeed=0;
+    gravity=0;
     exit;
 }
+
+
+if(place_meeting(x+hspeed, y+vspeed, obj_fighter)) {
+    move_contact_solid(direction,hspeed);
+}
+
 
 // Player death
 if(hp<=0) {

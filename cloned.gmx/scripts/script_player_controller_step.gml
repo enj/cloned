@@ -1,4 +1,4 @@
-if(!is_undefined(fighter)) fighter.hspeed = 0;
+//if(!is_undefined(fighter) && !fighter.jumping) fighter.hspeed = 0;
 if(!run_step ||global.pause || attacking) exit;
 
 
@@ -6,7 +6,13 @@ if(keyboard_check_pressed(key_pause) || gamepad_button_check_pressed(controller_
     var o = instance_create(0,0,obj_pause_menu);
     o.controller=controller_num;
 }
-    
+
+if(keyboard_check(key_jump) || gamepad_button_check_pressed(controller_num, pad_jump)) {
+    script_execute(script_jump, fighter);
+}
+
+if(!fighter.jumping) fighter.hspeed = 0;
+
 if(keyboard_check_pressed(key_special) || gamepad_button_check_pressed(controller_num, pad_special)) {
     script_execute(script_special_attack, fighter);
 }

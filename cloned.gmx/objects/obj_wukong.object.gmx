@@ -32,6 +32,7 @@ sprite_punching = spr_wukong_punch;
 sprite_kicking  = spr_wukong_kick;
 sprite_walking  = spr_wukong_walking;
 sprite_blocking = spr_wukong_block;
+sprite_jumping  = spr_wukong_jumping;
 mask_punching   = mask_wukong_punch;
 mask_kicking    = mask_wukong_kick;
 sprite_index = sprite_standing;

@@ -28,6 +28,7 @@
             <string>fighter_name="Generic";
 attacking=false;
 blocking=false;
+jumping=false;
 hb_y1 = 10;
 hb_y2 = 30;
 hbo_y1 = 10;
@@ -45,6 +46,7 @@ sprite_punching = spr_jibbers_punch;
 sprite_kicking  = spr_jibbers_kick;
 sprite_walking  = spr_jibbers_walking;
 sprite_blocking = spr_jibbers_standing;
+sprite_jumping  = spr_jibbers_standing;
 mask_punching   = mask_jibbers_punch;
 mask_kicking    = mask_jibbers_kick;
 
@@ -159,8 +161,12 @@ hp=100;
           <argument>
             <kind>1</kind>
             <string>move_contact_solid(direction,0);
+//hspeed=0;
 vspeed=0;
-
+if(jumping) {
+    jumping=false;
+    sprite_index = sprite_standing;
+}
 </string>
           </argument>
         </arguments>
@@ -195,9 +201,9 @@ vspeed=0;
     <event eventtype="7" enumb="50">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -209,35 +215,12 @@ vspeed=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>xprevious</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>y</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>yprevious</string>
+            <string>if(x&lt;1024) x+=8;
+else x-=8;
+
+if(!jumping) y=yprevious;
+
+</string>
           </argument>
         </arguments>
       </action>

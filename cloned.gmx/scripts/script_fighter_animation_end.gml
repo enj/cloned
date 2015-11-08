@@ -1,10 +1,10 @@
-if(blocking==true) {
+if(blocking) {
     image_speed=0;
-} else {
+} else if(!jumping) {
     sprite_index=sprite_standing;
 }
 
-if(attacking==true) {
+if(attacking) {
     attacking = false;
     depth=-1;
     opponent.depth=0;
