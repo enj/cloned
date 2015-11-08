@@ -13,7 +13,7 @@ It will be awesome :)
   * Left:    Left Arrow
   * Punch:   Control
   * Kick:    Space
-  * Jump:    Up Arrow (not implemented)
+  * Jump:    Up Arrow
   * Block:   Z
   * Special: X
   * Pause: Esc
@@ -23,7 +23,7 @@ It will be awesome :)
   * Left:    Left analog stick left
   * Punch:   X
   * Kick:    A
-  * Jump:    Left analog stick up (not implemented)
+  * Jump:    B
   * Block:   Y
   * Special: Right Trigger
   * Pause: Start
