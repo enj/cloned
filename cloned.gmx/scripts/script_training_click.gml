@@ -1,3 +1,6 @@
+texture_set_interpolation(false);
+display_reset(0,false);
+
 global.player1="wukong";
 global.player2="jibbers";
 

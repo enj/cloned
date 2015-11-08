@@ -10,7 +10,7 @@ if(global.training_mode && controller_obj[1].is_ai) {
     script_ai_fitness(fighter_obj[1], global.p2_ai_array, 1);
     if(global.ai_training_instance==array_length_1d(global.p2_ai_array)-1) {
         global.p2_ai_array = script_mate_ai(1);
-        incinc_generation_gen=true;
+        inc_generation=true;
     }
 }
 

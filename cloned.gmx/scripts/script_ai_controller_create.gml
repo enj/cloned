@@ -1,6 +1,6 @@
 event_inherited();
 is_ai=true;
-fighter=obj_fighter;
+fighter=undefined;
 step=0;
 ai_grid=undefined;
 state=0;

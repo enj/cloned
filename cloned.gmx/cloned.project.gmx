@@ -64,8 +64,6 @@
         <sprite>sprites\mask_cassandra_kick</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_arcade_mode</sprite>
-    <sprite>sprites\spr_vs_mode</sprite>
     <sprites name="Vs">
       <sprite>sprites\spr_vs_jibbers</sprite>
       <sprite>sprites\spr_vs_panda</sprite>
@@ -172,10 +170,7 @@
       <object>objects\obj_ground</object>
     </objects>
     <objects name="Buttons">
-      <object>objects\obj_arcade_mode</object>
-      <object>objects\obj_vs_mode</object>
       <object>objects\obj_room_speed</object>
-      <object>objects\obj_training</object>
     </objects>
     <objects name="Character Select">
       <object>objects\obj_charselect</object>

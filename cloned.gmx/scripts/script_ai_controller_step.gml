@@ -1,9 +1,9 @@
-if(global.pause) exit;
+if(!is_undefined(fighter) && !run_step) fighter.hspeed = 0;
+if(global.pause || !run_step) exit;
 
-if(run_step && step%5==0) {
-    hspeed = 0;
+step++;
+if(step%5==0) {
     script_ai_decide();
     step=0;
 }
-step++;
 

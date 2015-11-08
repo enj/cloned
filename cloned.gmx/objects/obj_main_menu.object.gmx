@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+texture_set_interpolation(true);
+display_reset(8,true);
+
 options[0]="Arcade Mode";
 options[1]="Vs Mode";
 options[2]="AI Training";

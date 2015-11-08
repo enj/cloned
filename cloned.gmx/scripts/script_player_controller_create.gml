@@ -1,5 +1,5 @@
 event_inherited();
-fighter=obj_fighter;
+fighter=undefined;
 // Controller Settings
 use_controller=true;
 pad_right = gp_axislh;
