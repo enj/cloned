@@ -30,13 +30,18 @@ It will be awesome :)
 
 
 ##Resources:
-Featuring Music by Matthew Pablo (Blackmoor Tides)    
+"Blackmoor Tides" by Matthew Pablo  
 http://www.matthewpablo.com  
 Used with explicit permission  
   
 "The End of Madness" by Jeremy Soule, Keenan Sieg, Lena Chappelle, Maclaine Diemer, Matthew Moore, and Stan LePard  
 http://ocremix.org/remix/OCR03240  
-Permission to use OCReMixes as long as we are not profiting directly from its use and we credit the authors and OCRemix.org  
+Permission to use OCReMixes as long as we are not profiting directly from its use and we credit the authors and OCRemix.org 
+
+"Like Cats & Dogs" by Wontolla  
+Edited by Sarah Baucom  
+http://opengameart.org/content/like-cats-dogs  
+Creative Commons  
   
 "Muffled Explosion" - NedadSimic  
 http://opengameart.org/content/muffled-distant-explosion  
