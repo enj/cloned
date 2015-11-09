@@ -3,10 +3,10 @@ if(global.training_mode && !is_undefined(ai_grid)) {
     var draw_x;
     var player;
     if(self.id==controller_obj[0]) {
-        draw_x=10;
+        draw_x=view_xview[0] + 10;
         player = 1;
     } else {
-        draw_x=850;
+        draw_x=view_xview[0]+view_wview[0]-174;
         player = 2;
     }
     draw_text(draw_x,70,"Player " + string(player) + "#"
