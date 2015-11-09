@@ -1,5 +1,5 @@
 //if(!is_undefined(fighter) && !fighter.jumping) fighter.hspeed = 0;
-if(!run_step ||global.pause || attacking) exit;
+if(!run_step || global.pause || attacking) exit;
 
 
 if(keyboard_check_pressed(key_pause) || gamepad_button_check_pressed(controller_num, pad_pause)) {
