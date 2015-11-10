@@ -155,7 +155,7 @@ script_draw_stroked_text("P1", 345+(p1_index%2)*192, 365+floor(p1_index/2)*192, 
 
 switch(p1_index) {
     case 0:
-        draw_sprite_ext(spr_jibbers_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        draw_sprite_ext(spr_jibbers_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
         break;
     case 1:
         draw_sprite_ext(spr_wukong_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
@@ -175,7 +175,7 @@ if(is_undefined(p2_pick)) color = c_red;
 script_draw_stroked_text("P2", 487+(p2_index%2)*192, 365+floor(p2_index/2)*192, .25, color,color,fa_center,fa_center,1);
 switch(p2_index) {
     case 0:
-        draw_sprite_ext(spr_jibbers_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        draw_sprite_ext(spr_jibbers_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
         break;
     case 1:
         draw_sprite_ext(spr_wukong_standing, 0, 851, 512, -1, 1, 0, c_white, 1);

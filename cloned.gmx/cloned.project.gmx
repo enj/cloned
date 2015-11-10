@@ -27,9 +27,10 @@
     <sprite>sprites\spr_empty</sprite>
     <sprites name="Jibbers">
       <sprite>sprites\spr_jibbers_standing</sprite>
+      <sprite>sprites\spr_jibbers_block</sprite>
       <sprite>sprites\spr_jibbers_walking</sprite>
-      <sprite>sprites\spr_jibbers_kick</sprite>
       <sprite>sprites\spr_jibbers_punch</sprite>
+      <sprite>sprites\spr_jibbers_kick</sprite>
       <sprites name="Masks">
         <sprite>sprites\mask_jibbers_punch</sprite>
         <sprite>sprites\mask_jibbers_kick</sprite>
