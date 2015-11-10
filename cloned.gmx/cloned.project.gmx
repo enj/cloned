@@ -180,6 +180,7 @@
       <object>objects\obj_wukong</object>
       <object>objects\obj_view_follow</object>
       <object>objects\obj_special_jibbers</object>
+      <object>objects\obj_special_bahamut</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_music</object>

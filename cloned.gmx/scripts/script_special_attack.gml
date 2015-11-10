@@ -7,5 +7,9 @@ switch(my_fighter.fighter_name) {
         var o = instance_create(0,0,obj_special_jibbers);
         o.fighter = my_fighter;
         break;
+    case "Cassandra":
+        var o = instance_create(0,0,obj_special_bahamut);
+        o.fighter = my_fighter;
+        break;
 }
 
