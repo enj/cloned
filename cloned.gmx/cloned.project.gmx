@@ -93,7 +93,6 @@
   <backgrounds name="background">
     <background>background\back_jibbers</background>
     <background>background\back_bahamut</background>
-    <background>background\back_main</background>
     <background>background\back_jibbers3</background>
     <background>background\fore_jibbers3</background>
   </backgrounds>
