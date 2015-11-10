@@ -38,8 +38,8 @@ mask_kicking    = mask_wukong_kick;
 sprite_index = sprite_standing;
 
 // Sprite stuff
-image_xscale=1;
-image_yscale=1;
+//image_xscale=1;
+//image_yscale=1;
 player_speed = 8;
 base_image_speed=0.3;
 image_speed = base_image_speed;

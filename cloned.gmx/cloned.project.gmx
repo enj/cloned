@@ -5,10 +5,23 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\mus_jibbers</sound>
-    <sound>sound\mus_bahamut</sound>
-    <sound>sound\snd_cannon</sound>
-    <sound>sound\mus_main</sound>
+    <sounds name="Music">
+      <sound>sound\mus_main</sound>
+      <sound>sound\mus_bahamut</sound>
+      <sound>sound\mus_jibbers</sound>
+    </sounds>
+    <sounds name="Announcer">
+      <sound>sound\snd_fight</sound>
+      <sound>sound\snd_draw</sound>
+      <sound>sound\snd_lose</sound>
+      <sound>sound\snd_win</sound>
+      <sound>sound\snd_round1</sound>
+      <sound>sound\snd_round2</sound>
+      <sound>sound\snd_round3</sound>
+    </sounds>
+    <sounds name="Effects">
+      <sound>sound\snd_cannon</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_empty</sprite>
@@ -80,6 +93,9 @@
   <backgrounds name="background">
     <background>background\back_jibbers</background>
     <background>background\back_bahamut</background>
+    <background>background\back_main</background>
+    <background>background\back_jibbers3</background>
+    <background>background\fore_jibbers3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

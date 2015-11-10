@@ -1,4 +1,4 @@
-if(global.pause) {
+if(global.pause || room==rm_mainMenu) {
     hspeed=0;
     vspeed=0;
     gravity=0;

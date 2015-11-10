@@ -9,65 +9,85 @@ if(global.training_mode) {
 
 if(!round_started) {
     if(!global.training_mode) {
+        if(!played_snd_round) {
+            switch(global.wins[0] + global.wins[1]) {
+                case 0:
+                    audio_play_sound(snd_round1, 1, false);
+                    break;
+                case 1:
+                    audio_play_sound(snd_round2, 1, false);
+                    break;
+                case 2:
+                    audio_play_sound(snd_round3, 1, false);
+                    break;
+            }
+            played_snd_round = true;
+        }
         step++;
         if(step==room_speed*3) {
             round_started=true;
+            controller_obj[0].run_step = true;
+            controller_obj[1].run_step = true;
+            audio_play_sound(snd_fight, 1, false);
             step=0;
         }
         exit;
     } else {
         round_started=true;
-    }
-}
-
-if(!declared_winner) {
-    if(round_started) {
-        timer--;
         controller_obj[0].run_step = true;
         controller_obj[1].run_step = true;
     }
+    exit;
 }
 
+if(declared_winner) exit;
 
-
-
-if(!declared_winner && timer<=0) {
+if(winner >=0) {
     controller_obj[0].run_step = false;
     controller_obj[1].run_step = false;
+    switch(winner) {
+        case 0:
+            winner_message = fighter_obj[0].fighter_name + " Wins!";
+            if(!global.training_mode) audio_play_sound(snd_win, 1, false);
+            global.wins[0]++;
+            break;
+        case 1:
+            winner_message = fighter_obj[1].fighter_name + " Wins!";
+            if(!global.training_mode) audio_play_sound(snd_lose, 1, false);
+            global.wins[1]++;
+            break;
+        case 2:
+            winner_message = "Draw!";
+            if(!global.training_mode) audio_play_sound(snd_draw, 1, false);
+            break;
+    }
     declared_winner=true;
-    winner_message="Draw!";
+    alarm[0]=60;
+}
+
+timer--;
+
+
+
+
+
+if(timer<=0) {
     var p1_percent = fighter_obj[0].hp/fighter_obj[0].max_hp;
     var p2_percent = fighter_obj[1].hp/fighter_obj[1].max_hp;
     if(p1_percent > p2_percent) {
-        winner_message = fighter_obj[0].fighter_name + " Wins!";
-        global.wins[0]++;
+        winner=0;
+    } else if(p2_percent > p1_percent) {
+        winner=1;
+    } else {
+        winner=2;
     }
-    if(p2_percent > p1_percent) {
-        winner_message = fighter_obj[1].fighter_name + " Wins!";
-        global.wins[1]++;
-    }
-    alarm[0]=60;
     exit;
 }
 
 if(fighter_obj[0].hp<=0) {
-    controller_obj[0].run_step = false;
-    controller_obj[1].run_step = false;
-    if(!declared_winner) {
-        declared_winner=true;
-        global.wins[1]++;
-        winner_message = fighter_obj[1].fighter_name + " Wins!";
-        alarm[0]=60;
-    }
+    winner=1;
 } else if(fighter_obj[1].hp<=0) {
-    controller_obj[0].run_step = false;
-    controller_obj[1].run_step = false;
-    if(!declared_winner) {
-        declared_winner=true;
-        global.wins[0]++;
-        winner_message = fighter_obj[0].fighter_name + " Wins!";
-        alarm[0]=60;
-    }
+    winner=0;
 }
 
 

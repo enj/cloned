@@ -1,3 +1,4 @@
+if(room==rm_mainMenu) exit;
 // Assumes this is player character
 var x1 = 10;
 var bar_direction = 0; // 0 = left, 1 = right, 2 = top, 3 = bottom

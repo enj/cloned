@@ -7,3 +7,4 @@ with(my_fighter) {
         image_speed = -1*my_fighter.base_image_speed;
     }
 }
+

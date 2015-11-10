@@ -1,5 +1,5 @@
 var my_fighter=argument0;
-if(my_fighter.attacking || my_fighter.blocking || my_fighter.jumping) exit;
+if(my_fighter.attacking || my_fighter.blocking) exit;
 with(my_fighter) {
     hspeed=player_speed;
     if(!my_fighter.jumping) sprite_index=sprite_walking;
@@ -7,3 +7,4 @@ with(my_fighter) {
         image_speed = -1*my_fighter.base_image_speed;
     }
 }
+
