@@ -32,7 +32,7 @@ It will be awesome :)
 ##Resources:
 "Blackmoor Tides" by Matthew Pablo  
 http://www.matthewpablo.com  
-Used with explicit permission  
+Used with permission  
   
 "The End of Madness" by Jeremy Soule, Keenan Sieg, Lena Chappelle, Maclaine Diemer, Matthew Moore, and Stan LePard  
 http://ocremix.org/remix/OCR03240  
@@ -50,5 +50,12 @@ Public Domain
 "Simple Explosion" - Bleed  
 http://opengameart.org/content/simple-explosion-bleeds-game-art  
 Creative Commons  
+
+"Announcer Sounds" - Owen Raudenbush  
+Recorded and edited by Sarah Baucom  
+Used with permission  
+
+"Jibbers Stage" - Owen Raudenbush  
+Used with permission  
   
 Cannonball - Probably need replacement
