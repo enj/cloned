@@ -51,7 +51,7 @@ options[0]="Retry";
             <kind>1</kind>
             <string>event_inherited();
 
-if(keyboard_check(vk_enter) || gamepad_button_check_pressed(controller, gp_face1)) {
+if(keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(controller, gp_face1)) {
     if(options[selected]=="Retry") {
         global.pause = false;
         global.wins[0]=0;

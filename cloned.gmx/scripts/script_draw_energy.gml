@@ -1,20 +1,23 @@
 if(room==rm_mainMenu) exit;
+
+// Get the scale of the screen relative to the view
+var scale = (window_get_height() / view_hview[0]);
+
 // Assumes this is player character
-var x1 = 10;
+var x1 = 10*scale;
 var bar_direction = 0; // 0 = left, 1 = right, 2 = top, 3 = bottom
 
 // Fix assumption if needed
-var width = 250;
+var width = 250*scale;
 if (opponent == fighter_obj[0]) {
     bar_direction = 1;
-//    x1 = display_get_gui_width() - 50 - width - x1; //TODO this needs work
     var scale = (window_get_height() / view_hview[0]);
     x1 = view_wview[0]*scale-width-x1; //This seems to work
 }
 
 // Health bar vars
-var y1 = 40;
-var height = 20;
+var y1 = 40*scale;
+var height = 20*scale;
 var bg_color = c_white;
 var dead_color = c_purple;
 var full_color = c_yellow;

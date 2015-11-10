@@ -74,7 +74,7 @@ room_speed=global.training_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_draw_stroked_text("Training", view_xview[0]+view_wview[0]/2, 60, .33, c_gray, c_gray, fa_center, fa_center, 2);
+            <string>script_draw_stroked_text("Training", view_xview[0]+view_wview[0]/2, 60, .33, c_gray, c_gray, fa_center, fa_center, 1);
 </string>
           </argument>
         </arguments>
