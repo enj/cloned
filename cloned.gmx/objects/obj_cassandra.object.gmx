@@ -32,6 +32,7 @@ sprite_punching = spr_cassandra_punch;
 sprite_kicking  = spr_cassandra_kick;
 sprite_walking  = spr_cassandra_walking;
 sprite_blocking = spr_cassandra_standing;
+sprite_jumping  = spr_cassandra_standing;
 mask_punching   = mask_cassandra_punch;
 mask_kicking    = mask_cassandra_kick;
 sprite_index = sprite_standing;

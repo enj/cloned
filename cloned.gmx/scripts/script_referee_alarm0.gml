@@ -26,6 +26,8 @@ if(inc_generation) {
     ds_list_delete(f,0);
     global.player2 = ds_list_find_value(f,0);
     ds_list_destroy(f);
+    global.wins[0]=0;
+    global.wins[1]=0;
     script_read_ai_generation(global.player1, global.p1_ai_array);
     script_read_ai_generation(global.player2, global.p2_ai_array);
     global.ai_training_instance=0;

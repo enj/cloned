@@ -32,6 +32,7 @@ sprite_punching = spr_panda_punch;
 sprite_kicking  = spr_panda_kick;
 sprite_walking  = spr_panda_walking;
 sprite_blocking = spr_panda_standing;
+sprite_jumping  = spr_panda_standing;
 mask_punching   = mask_panda_punch;
 mask_kicking    = mask_panda_kick;
 sprite_index = sprite_standing;
