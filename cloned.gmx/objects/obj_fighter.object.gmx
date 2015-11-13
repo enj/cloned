@@ -34,7 +34,7 @@ hb_y2 = 30;
 hbo_y1 = 10;
 hbo_y2 = 30;
 player_speed=0;
-base_image_speed=0.3;
+base_image_speed=0.25;
 player=-1;
 opponent = self;
 facing_right = true;
@@ -49,6 +49,7 @@ sprite_blocking = spr_jibbers_standing;
 sprite_jumping  = spr_jibbers_standing;
 mask_punching   = mask_jibbers_punch;
 mask_kicking    = mask_jibbers_kick;
+sprite_death    = spr_panda_death;
 
 // Character parameters
 player_speed = 0;

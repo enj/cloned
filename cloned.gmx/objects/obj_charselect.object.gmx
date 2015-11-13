@@ -161,7 +161,7 @@ switch(p1_index) {
         draw_sprite_ext(spr_wukong_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
         break;
     case 2:
-        draw_sprite_ext(spr_panda_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        draw_sprite_ext(spr_panda_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
         break;
     case 3:
         draw_sprite_ext(spr_cassandra_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
@@ -181,7 +181,7 @@ switch(p2_index) {
         draw_sprite_ext(spr_wukong_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
         break;
     case 2:
-        draw_sprite_ext(spr_panda_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        draw_sprite_ext(spr_panda_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
         break;
     case 3:
         draw_sprite_ext(spr_cassandra_standing, 0, 851, 512, -3, 3, 0, c_white, 1);

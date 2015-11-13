@@ -32,6 +32,7 @@ sprite_punching = spr_jibbers_punch;
 sprite_kicking  = spr_jibbers_kick;
 sprite_walking  = spr_jibbers_walking;
 sprite_blocking = spr_jibbers_block;
+sprite_jumping  = spr_jibbers_jumping;
 mask_punching   = mask_jibbers_punch;
 mask_kicking    = mask_jibbers_kick;
 sprite_index = sprite_standing;
@@ -40,11 +41,11 @@ sprite_index = sprite_standing;
 image_xscale=1;
 image_yscale=1;
 player_speed = 8;
-base_image_speed=0.6;
+base_image_speed=0.5;
 image_speed = base_image_speed;
-punch_range=110;
-kick_range=99;
-mask_offset=45;
+punch_range=106;
+kick_range=80;
+mask_offset=38;
 
 // Damages
 punch_damage=8;

@@ -27,6 +27,7 @@
     <sprite>sprites\spr_empty</sprite>
     <sprites name="Jibbers">
       <sprite>sprites\spr_jibbers_standing</sprite>
+      <sprite>sprites\spr_jibbers_jumping</sprite>
       <sprite>sprites\spr_jibbers_block</sprite>
       <sprite>sprites\spr_jibbers_walking</sprite>
       <sprite>sprites\spr_jibbers_punch</sprite>
@@ -50,9 +51,13 @@
     </sprites>
     <sprites name="Pxndx">
       <sprite>sprites\spr_panda_standing</sprite>
-      <sprite>sprites\spr_panda_walking</sprite>
-      <sprite>sprites\spr_panda_kick</sprite>
+      <sprite>sprites\spr_panda_death</sprite>
+      <sprite>sprites\spr_panda_jumping</sprite>
       <sprite>sprites\spr_panda_punch</sprite>
+      <sprite>sprites\spr_panda_special</sprite>
+      <sprite>sprites\spr_panda_kick</sprite>
+      <sprite>sprites\spr_panda_block</sprite>
+      <sprite>sprites\spr_panda_walking</sprite>
       <sprites name="Masks">
         <sprite>sprites\mask_panda_punch</sprite>
         <sprite>sprites\mask_panda_kick</sprite>
@@ -90,6 +95,7 @@
     <sprite>sprites\spr_cannonball</sprite>
     <sprite>sprites\spr_cannonball_explosion</sprite>
     <sprite>sprites\spr_full</sprite>
+    <sprite>sprites\spr_panda_fist</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_jibbers</background>
@@ -178,15 +184,20 @@
       <object>objects\obj_panda</object>
       <object>objects\obj_cassandra</object>
       <object>objects\obj_wukong</object>
-      <object>objects\obj_view_follow</object>
-      <object>objects\obj_special_jibbers</object>
-      <object>objects\obj_special_bahamut</object>
+      <objects name="Specials">
+        <object>objects\obj_special_jibbers</object>
+        <object>objects\obj_special_bahamut</object>
+        <object>objects\obj_special_panda</object>
+        <object>objects\obj_cannonball</object>
+        <object>objects\obj_explosion</object>
+      </objects>
     </objects>
     <objects name="Misc">
       <object>objects\obj_music</object>
       <object>objects\obj_globals</object>
       <object>objects\obj_referee</object>
       <object>objects\obj_ground</object>
+      <object>objects\obj_view_follow</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_room_speed</object>
@@ -204,8 +215,6 @@
       <object>objects\obj_player_controller</object>
       <object>objects\obj_ai_controller</object>
     </objects>
-    <object>objects\obj_cannonball</object>
-    <object>objects\obj_explosion</object>
     <object>objects\obj_pause_menu</object>
     <object>objects\obj_retry_menu</object>
     <object>objects\obj_main_menu</object>

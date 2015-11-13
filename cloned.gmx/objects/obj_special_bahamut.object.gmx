@@ -81,6 +81,54 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>opp_x</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>opp_y</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -101,15 +149,17 @@
             <kind>1</kind>
             <string>if(step==room_speed/2) instance_destroy();
 step++;
-if(!did_hit) {
+//if(!did_hit) {
+    var ox = opp_x;
+    var oy = opp_y;
     with(fighter) {
-        if(collision_line(x,y-175,opponent.x,opponent.y-60,obj_fighter,false,true) == noone) {
+        if(collision_line(x,y-175,ox,oy-60,obj_fighter,false,true) == noone) {
             exit;
         }
     }
     did_hit=true;
     script_do_damage(fighter,fighter.opponent, "special");
-}
+//}
 
 </string>
           </argument>
@@ -135,7 +185,7 @@ if(!did_hit) {
             <kind>1</kind>
             <string>if(is_undefined(fighter)) exit;
 draw_set_color(c_red);
-draw_line_width(fighter.x,fighter.y-175,fighter.opponent.x,fighter.opponent.y-60, 5);
+draw_line_width(fighter.x,fighter.y-175,opp_x,opp_y-60, 5);
 draw_set_color(c_black);
 
 </string>

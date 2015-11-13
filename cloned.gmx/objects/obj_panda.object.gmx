@@ -26,31 +26,33 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-fighter_name="Panda";
+fighter_name="Pxndx";
 sprite_standing = spr_panda_standing;
 sprite_punching = spr_panda_punch;
 sprite_kicking  = spr_panda_kick;
 sprite_walking  = spr_panda_walking;
-sprite_blocking = spr_panda_standing;
-sprite_jumping  = spr_panda_standing;
+sprite_blocking = spr_panda_block;
+sprite_jumping  = spr_panda_jumping;
+sprite_death    = spr_panda_death;
+sprite_special  = spr_panda_special;
 mask_punching   = mask_panda_punch;
 mask_kicking    = mask_panda_kick;
 sprite_index = sprite_standing;
 
 // Sprite stuff
-image_xscale=3;
-image_yscale=3;
+image_xscale=1;
+image_yscale=1;
 player_speed = 8;
-base_image_speed=0.3;
+base_image_speed=0.25;
 image_speed = base_image_speed;
-punch_range=110;
-kick_range=99;
-mask_offset=45;
+punch_range=148;
+kick_range=153;
+mask_offset=48;
 
 // Damages
 punch_damage=8;
 kick_damage=12;
-special_damage=10;
+special_damage=50;
 
 // Stats
 max_hp=300;

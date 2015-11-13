@@ -14,6 +14,7 @@ if(place_meeting(x+hspeed, y+vspeed, obj_fighter)) {
 // Player death
 if(hp<=0) {
     hp=0;
+    sprite_index=sprite_death;
 }
 
 

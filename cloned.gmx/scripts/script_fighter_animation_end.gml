@@ -4,6 +4,11 @@ if(blocking) {
     sprite_index=sprite_standing;
 }
 
+if(hp==0) {
+    image_speed=0;
+    image_index=3;
+}
+
 if(attacking) {
     attacking = false;
     depth=-1;
