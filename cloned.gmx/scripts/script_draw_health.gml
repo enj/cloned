@@ -1,4 +1,4 @@
-if(room==rm_mainMenu) exit;
+if(room==rm_mainMenu || room==rm_character_select) exit;
 
 // Get the scale of the screen relative to the view
 var scale = (window_get_height() / view_hview[0]);

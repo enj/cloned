@@ -85,7 +85,11 @@ if(timer<=0) {
 }
 
 if(fighter_obj[0].hp<=0) {
-    winner=1;
+    if(fighter_obj[1].hp<=0) {
+        winner=2;
+    } else {
+        winner=1;
+    }
 } else if(fighter_obj[1].hp<=0) {
     winner=0;
 }

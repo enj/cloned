@@ -1,8 +1,8 @@
 display_reset(0,false);
 texture_set_interpolation(false);
 
-global.player1="wukong";
-global.player2="jibbers";
+//global.player1="wukong";
+//global.player2="jibbers";
 
 global.training_speed = 10000;
 
@@ -23,7 +23,7 @@ var f = ds_list_create();
 ds_list_add(f, "wukong");
 ds_list_add(f, "jibbers");
 ds_list_add(f, "panda");
-ds_list_add(f, "cassandra");
+//ds_list_add(f, "cassandra");
 //ds_list_add(f, "bahamut");
 ds_list_shuffle(f);
 global.player1 = ds_list_find_value(f,0);

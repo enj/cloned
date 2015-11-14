@@ -3,6 +3,8 @@ var victim = argument1;
 var type = argument2;
 var guard = victim.blocking;
 
+if(obj_referee.winner>=0) exit;
+
 var damage;
 switch(type) {
     case "punch":

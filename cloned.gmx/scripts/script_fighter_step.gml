@@ -1,4 +1,4 @@
-if(global.pause || room==rm_mainMenu) {
+if(global.pause || room==rm_mainMenu || room==rm_character_select) {
     hspeed=0;
     vspeed=0;
     gravity=0;

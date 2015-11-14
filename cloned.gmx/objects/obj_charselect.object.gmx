@@ -41,7 +41,10 @@ p2_index=1;
 characters[0]="jibbers";
 characters[1]="wukong";
 characters[2]="panda";
-characters[3]="cassandra";
+characters[3]="random";
+
+left_char_obj = instance_create(173,512,obj_fighter);
+right_char_obj = instance_create(851,512,obj_fighter);
 
 </string>
           </argument>
@@ -66,8 +69,13 @@ characters[3]="cassandra";
           <argument>
             <kind>1</kind>
             <string>if(!is_undefined(p1_pick)) {
-    if(global.mode=="arcade") script_arcade_mode();
-    else if(!is_undefined(p2_pick)) script_room_select();
+    if(p1_pick == "random") global.player1 = choose("jibbers", "wukong", "panda");
+    if(global.mode=="arcade") {
+        script_arcade_mode();
+    } else if(!is_undefined(p2_pick)) {
+        if(p2_pick == "random") global.player2 = choose("jibbers", "wukong", "panda");
+        script_room_select();
+    }
 }
 
 // Player 1
@@ -90,8 +98,22 @@ if(is_undefined(p1_pick) &amp;&amp; (keyboard_check(controller_obj[0].key_right)
 if(keyboard_check_pressed(controller_obj[0].key_kick) || gamepad_button_check_pressed(controller_obj[0].controller_num, controller_obj[0].pad_kick)) {
     if(is_undefined(p1_pick)) p1_pick = characters[p1_index];
     else p1_pick = undefined;
-    global.player1=p1_pick;
+    global.player1=p1_pick;    
     p1_step=0;
+}
+
+switch(p1_index) {
+    case 0:
+        with(left_char_obj) {visible=true; instance_change(obj_jibbers, true);}
+        break;
+    case 1:
+        with(left_char_obj) {visible=true; instance_change(obj_wukong, true);}
+        break;
+    case 2:
+        with(left_char_obj) {visible=true; instance_change(obj_panda, true);}
+        break;
+    case 3:
+        with(left_char_obj) visible=false;
 }
 
 
@@ -117,11 +139,26 @@ if(is_undefined(p2_pick) &amp;&amp; (keyboard_check(controller_obj[1].key_right)
 if(keyboard_check_pressed(controller_obj[1].key_kick) || gamepad_button_check_pressed(controller_obj[1].controller_num, controller_obj[1].pad_kick)) {
     if(is_undefined(p2_pick)) p2_pick = characters[p2_index];
     else p2_pick = undefined;
-    global.player2=p2_pick;
+    global.player2=p2_pick;    
     p2_step=0;
 }
 
+switch(p2_index) {
+    case 0:
+        with(right_char_obj) {visible=true; instance_change(obj_jibbers, true);}
+        break;
+    case 1:
+        with(right_char_obj) {visible=true; instance_change(obj_wukong, true);}
+        break;
+    case 2:
+        with(right_char_obj) {visible=true; instance_change(obj_panda, true);}
+        break;
+    case 3:
+        with(right_char_obj) visible=false;
+}
 
+right_char_obj.image_xscale = -1;    
+    
 </string>
           </argument>
         </arguments>
@@ -153,40 +190,54 @@ var color = c_green;
 if(is_undefined(p1_pick)) color = c_red;
 script_draw_stroked_text("P1", 345+(p1_index%2)*192, 365+floor(p1_index/2)*192, .25, color,color,fa_center,fa_center,1);
 
+var p1_name = "";
 switch(p1_index) {
     case 0:
-        draw_sprite_ext(spr_jibbers_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_jibbers_standing, -1, 173, 512, 1, 1, 0, c_white, 1);
+        p1_name = "Jibbers";
         break;
     case 1:
-        draw_sprite_ext(spr_wukong_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_wukong_standing, -1, 173, 512, 1, 1, 0, c_white, 1);
+        p1_name = "Wukong";
         break;
     case 2:
-        draw_sprite_ext(spr_panda_standing, 0, 173, 512, 1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_panda_standing, -1, 173, 512, 1, 1, 0, c_white, 1);
+        p1_name = "Pxndx";
         break;
     case 3:
-        draw_sprite_ext(spr_cassandra_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+//        draw_sprite_ext(spr_cassandra_standing, 0, 173, 512, 3, 3, 0, c_white, 1);
+        p1_name = "Random";
         break;
 }
+script_draw_stroked_text(p1_name, 173, 540, .5, c_yellow, c_orange, fa_center, fa_center, 2);
 
 
 if(global.mode=="arcade") exit;
 color = c_green;
 if(is_undefined(p2_pick)) color = c_red;
 script_draw_stroked_text("P2", 487+(p2_index%2)*192, 365+floor(p2_index/2)*192, .25, color,color,fa_center,fa_center,1);
+
+var p2_name = "";
 switch(p2_index) {
     case 0:
-        draw_sprite_ext(spr_jibbers_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_jibbers_standing, -1, 851, 512, -1, 1, 0, c_white, 1);
+        p2_name = "Jibbers";
         break;
     case 1:
-        draw_sprite_ext(spr_wukong_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_wukong_standing, -1, 851, 512, -1, 1, 0, c_white, 1);
+        p2_name = "Wukong";
         break;
     case 2:
-        draw_sprite_ext(spr_panda_standing, 0, 851, 512, -1, 1, 0, c_white, 1);
+//        draw_sprite_ext(spr_panda_standing, -1, 851, 512, -1, 1, 0, c_white, 1);
+        p2_name = "Pxndx";
         break;
     case 3:
-        draw_sprite_ext(spr_cassandra_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+//        draw_sprite_ext(spr_cassandra_standing, 0, 851, 512, -3, 3, 0, c_white, 1);
+        p2_name = "Random";
         break;
 }
+script_draw_stroked_text(p2_name, 851, 540, .5, c_yellow, c_orange, fa_center, fa_center, 2);
+
 </string>
           </argument>
         </arguments>

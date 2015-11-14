@@ -1,13 +1,16 @@
+if(hp==0) {
+    image_speed=0;
+    image_index=3;
+    exit;
+}
+
 if(blocking) {
     image_speed=0;
 } else if(!jumping) {
     sprite_index=sprite_standing;
 }
 
-if(hp==0) {
-    image_speed=0;
-    image_index=3;
-}
+
 
 if(attacking) {
     attacking = false;
