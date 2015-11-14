@@ -1,7 +1,7 @@
 var my_fighter=argument0;
-//if(my_fighter.attacking || my_fighter.blocking || my_fighter.mp<my_fighter.max_mp) exit;
+if(my_fighter.attacking || my_fighter.blocking || my_fighter.mp<my_fighter.max_mp) exit;
 
-my_fighter.mp=0;
+
 switch(my_fighter.fighter_name) {
     case "Jibbers":
         with(my_fighter) {
@@ -64,4 +64,4 @@ switch(my_fighter.fighter_name) {
         o.opp_y = my_fighter.opponent.y;
         break;
 }
-
+my_fighter.mp=0;
