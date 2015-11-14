@@ -4,6 +4,7 @@ if(my_fighter.attacking || my_fighter.blocking || my_fighter.mp<my_fighter.max_m
 
 switch(my_fighter.fighter_name) {
     case "Jibbers":
+        audio_play_sound(snd_jibbers_attack_1, 1, false);
         with(my_fighter) {
             if(!jumping) hspeed=0;
             if(image_speed<0) {

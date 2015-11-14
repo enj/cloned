@@ -59,6 +59,7 @@ hp=max_hp;
 max_mp=170
 mp = floor(max_mp / 2)
 
+
 </string>
           </argument>
         </arguments>

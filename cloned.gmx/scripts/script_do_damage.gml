@@ -23,6 +23,21 @@ switch(type) {
 
 if (guard) {
     damage /= 2; //TODO maybe character specific
+} else {
+    switch(victim.fighter_name) {
+        case "Jibbers":
+            audio_play_sound(choose(snd_jibbers_hit_1, snd_jibbers_hit_2, snd_jibbers_hit_3, snd_jibbers_hit_4), 2, false);
+            break;
+        case "Wukong":
+            audio_play_sound(choose(snd_jibbers_hit_1, snd_jibbers_hit_2, snd_jibbers_hit_3, snd_jibbers_hit_4), 2, false);
+            break;
+        case "Pxndx":
+            audio_play_sound(choose(snd_jibbers_hit_1, snd_jibbers_hit_2, snd_jibbers_hit_3, snd_jibbers_hit_4), 2, false);
+            break;
+        case "Bahamut":
+            audio_play_sound(choose(snd_jibbers_hit_1, snd_jibbers_hit_2, snd_jibbers_hit_3, snd_jibbers_hit_4), 2, false);
+            break;
+    }
 }
 
 attacker.mp += damage / 2;

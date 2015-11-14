@@ -21,6 +21,11 @@
     </sounds>
     <sounds name="Effects">
       <sound>sound\snd_cannon</sound>
+      <sound>sound\snd_jibbers_hit_1</sound>
+      <sound>sound\snd_jibbers_hit_2</sound>
+      <sound>sound\snd_jibbers_hit_3</sound>
+      <sound>sound\snd_jibbers_hit_4</sound>
+      <sound>sound\snd_jibbers_attack_1</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
