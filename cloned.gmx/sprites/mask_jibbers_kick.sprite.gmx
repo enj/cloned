@@ -22,5 +22,7 @@
   <frames>
     <frame index="0">images\mask_jibbers_kick_0.png</frame>
     <frame index="1">images\mask_jibbers_kick_1.png</frame>
+    <frame index="2">images\mask_jibbers_kick_2.png</frame>
+    <frame index="3">images\mask_jibbers_kick_3.png</frame>
   </frames>
 </sprite>

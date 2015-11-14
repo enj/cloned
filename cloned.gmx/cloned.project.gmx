@@ -27,6 +27,7 @@
     <sprite>sprites\spr_empty</sprite>
     <sprites name="Jibbers">
       <sprite>sprites\spr_jibbers_standing</sprite>
+      <sprite>sprites\spr_jibbers_special</sprite>
       <sprite>sprites\spr_jibbers_jumping</sprite>
       <sprite>sprites\spr_jibbers_block</sprite>
       <sprite>sprites\spr_jibbers_walking</sprite>
@@ -39,6 +40,7 @@
     </sprites>
     <sprites name="Wukong">
       <sprite>sprites\spr_wukong_standing</sprite>
+      <sprite>sprites\spr_wukong_special</sprite>
       <sprite>sprites\spr_wukong_walking</sprite>
       <sprite>sprites\spr_wukong_kick</sprite>
       <sprite>sprites\spr_wukong_punch</sprite>
@@ -47,6 +49,7 @@
       <sprites name="Masks">
         <sprite>sprites\mask_wukong_kick</sprite>
         <sprite>sprites\mask_wukong_punch</sprite>
+        <sprite>sprites\mask_wukong_special</sprite>
       </sprites>
     </sprites>
     <sprites name="Pxndx">

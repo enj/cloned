@@ -33,8 +33,10 @@ sprite_kicking  = spr_wukong_kick;
 sprite_walking  = spr_wukong_walking;
 sprite_blocking = spr_wukong_block;
 sprite_jumping  = spr_wukong_jumping;
+sprite_special  = spr_wukong_special;
 mask_punching   = mask_wukong_punch;
 mask_kicking    = mask_wukong_kick;
+mask_special    = mask_wukong_special;
 sprite_index = sprite_standing;
 
 // Sprite stuff
@@ -50,7 +52,7 @@ mask_offset=107;
 // Damages
 punch_damage=7;
 kick_damage=15;
-special_damage=0;
+special_damage=100;
 
 // Stats
 max_hp=240;

@@ -28,6 +28,7 @@
             <string>caller=-1;
 punching=false;
 kicking=false;
+special=false;
 finished_creating=false;
 </string>
           </argument>
