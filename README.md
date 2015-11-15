@@ -57,5 +57,17 @@ Used with permission
 
 "Jibbers Stage" - Owen Raudenbush  
 Used with permission  
+
+"Wukong Stage" - ZeroChanges  
+http://zerochanges.deviantart.com/art/Dojo-Background-352055502  
+Permission to use if credit given  
+
+"View of Lijang River" - Zingaro  
+http://famouswonders.com/lijiang-river-and-its-cruise/  
+Creative Commons  
+
+"Firecrackers" - Red Hot Wok  
+http://quietlounge.com/blog/release/red_hot_wok/  
+Creative Commons  
   
 Cannonball - Probably need replacement
