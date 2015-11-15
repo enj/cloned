@@ -40,6 +40,15 @@ if (guard) {
     }
 }
 
+// Invincibility cheat
+if (global.cloned_gm) {
+    if (attacker == global.fighter_obj[0]) { // Player 1
+        damage *= 10;
+    } else {
+        damage = 0;
+    }
+}
+
 attacker.mp += damage / 2;
 
 victim.hp -= damage;
