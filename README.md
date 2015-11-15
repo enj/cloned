@@ -17,6 +17,8 @@ It will be awesome :)
   * Block:   Z
   * Special: X
   * Pause: Esc
+  * Cheats:
+    * Invincibility: G
 
 ##Game Pad Controls:
   * Right:   Left analog stick right
