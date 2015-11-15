@@ -19,7 +19,7 @@ if(inc_generation) {
     ds_list_add(f, "wukong");
     ds_list_add(f, "jibbers");
     ds_list_add(f, "panda");
-    ds_list_add(f, "cassandra");
+//    ds_list_add(f, "cassandra");
 //    ds_list_add(f, "bahamut");
     ds_list_shuffle(f);
     global.player1 = ds_list_find_value(f,0);

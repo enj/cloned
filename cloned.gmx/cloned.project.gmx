@@ -9,6 +9,7 @@
       <sound>sound\mus_main</sound>
       <sound>sound\mus_bahamut</sound>
       <sound>sound\mus_jibbers</sound>
+      <sound>sound\mus_wukong</sound>
     </sounds>
     <sounds name="Announcer">
       <sound>sound\snd_fight</sound>
@@ -110,6 +111,8 @@
     <background>background\back_bahamut</background>
     <background>background\back_jibbers3</background>
     <background>background\fore_jibbers3</background>
+    <background>background\fore_wukong</background>
+    <background>background\back_wukong</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

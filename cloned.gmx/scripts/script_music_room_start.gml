@@ -10,10 +10,10 @@
             }
             break;
         case rm_wukong:
-            if(global.current_song!="jibbers") {
-                global.current_song="jibbers";
+            if(global.current_song!="wukong") {
+                global.current_song="wukong";
                 audio_stop_all();
-                audio_play_sound(mus_jibbers, 10, true);
+                audio_play_sound(mus_wukong, 10, true);
             }
             break;
         case rm_cassandra:

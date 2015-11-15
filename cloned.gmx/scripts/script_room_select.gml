@@ -39,6 +39,6 @@ if(global.mode=="vs") {
     global.controller_obj[1].fighter=undefined;
     
     global.stage = (choose("jibbers", "wukong", "panda", "bahamut"));
-    
+    //global.stage="wukong";
     room_goto(rm_vs);
 }

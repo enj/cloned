@@ -21,5 +21,7 @@
   <height>512</height>
   <frames>
     <frame index="0">images\mask_panda_kick_0.png</frame>
+    <frame index="1">images\mask_panda_kick_1.png</frame>
+    <frame index="2">images\mask_panda_kick_2.png</frame>
   </frames>
 </sprite>
