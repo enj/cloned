@@ -1,6 +1,9 @@
 var my_fighter=argument0;
-if(my_fighter.attacking || my_fighter.blocking || my_fighter.mp<my_fighter.max_mp) exit;
 
+var unlimited_special = global.cloned_gm && my_fighter == global.fighter_obj[0];
+var can_use_special = unlimited_special || my_fighter.mp >= my_fighter.max_mp;
+
+if (my_fighter.attacking || my_fighter.blocking || !can_use_special) exit;
 
 switch(my_fighter.fighter_name) {
     case "Jibbers":
