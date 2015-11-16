@@ -8,10 +8,10 @@ switch(global.stage) {
     case "panda":
         room_goto(rm_panda);
         break;
-    case "cassandra":
-        room_goto(rm_cassandra);
-        break;
     case "bahamut":
+        room_goto(rm_bahamut);
+        break;
+    case "bahamut2":
         room_goto(rm_bahamut);
         break;
     case "training":

@@ -16,18 +16,11 @@
                 audio_play_sound(mus_wukong, 10, true);
             }
             break;
-        case rm_cassandra:
-            if(global.current_song!="jibbers") {
-                global.current_song="jibbers";
-                audio_stop_all();
-                audio_play_sound(mus_jibbers, 10, true);
-            }
-            break;
         case rm_panda:
-            if(global.current_song!="jibbers") {
-                global.current_song="jibbers";
+            if(global.current_song!="panda") {
+                global.current_song="panda";
                 audio_stop_all();
-                audio_play_sound(mus_jibbers, 10, true);
+                audio_play_sound(mus_panda, 10, true);
             }
             break;
         case rm_bahamut:

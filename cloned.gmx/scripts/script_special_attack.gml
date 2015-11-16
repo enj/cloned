@@ -62,10 +62,31 @@ switch(my_fighter.fighter_name) {
         }
         break;
     case "Bahamut":
-        var o = instance_create(0,0,obj_special_bahamut);
-        o.fighter = my_fighter;
-        o.opp_x = my_fighter.opponent.x;
-        o.opp_y = my_fighter.opponent.y;
+        if(my_fighter.jumping) exit;
+        with(my_fighter) {
+            if(image_speed<0) {
+                image_speed = base_image_speed;
+            }
+            attacking=true;
+            sprite_index=sprite_special;
+            depth=-1000;
+        }
+        var hitbox_obj=instance_create(my_fighter.x,my_fighter.y,obj_hitbox);
+        with(hitbox_obj) {    
+            opponent = my_fighter.opponent;
+            caller = my_fighter;
+            sprite_index=my_fighter.mask_special;
+            image_xscale=my_fighter.image_xscale;
+            image_yscale=my_fighter.image_yscale;
+            image_speed=my_fighter.image_speed;
+            special=true;
+            finished_creating=true;
+        }
         break;
+//        var o = instance_create(0,0,obj_special_bahamut);
+//        o.fighter = my_fighter;
+//        o.opp_x = my_fighter.opponent.x;
+//        o.opp_y = my_fighter.opponent.y;
+//        break;
 }
 my_fighter.mp=0;

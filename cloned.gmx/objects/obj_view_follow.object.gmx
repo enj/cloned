@@ -54,6 +54,8 @@
             <string>if(room==rm_wukong) {
     background_x[0] = view_xview[0]-40;
     background_y[0] = view_yview[0]-191;
+} else if(room==rm_panda) {
+    background_x[0] = view_xview[0]/2;
 }
 </string>
           </argument>

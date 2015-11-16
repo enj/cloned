@@ -17,7 +17,7 @@ switch(player2) {
 //        sprite_index=spr_vs_cassandra;
 //        break;
     case "bahamut":
-        sprite_index=spr_vs_bahamut;
+        sprite_index=spr_vs_panda;
         name="Professor#Bahamut";
         break;
 }
