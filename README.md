@@ -5,8 +5,8 @@ It will be awesome :)
 
 ##To play:
   1. Launch game
-  2. Click on Arcade
-  3. Select your character
+  2. Click on Arcade (or use arrow keys and enter)
+  3. Select your character (press 'Kick' button)
 
 ##Controls:
   * Right: Right Arrow
@@ -18,7 +18,7 @@ It will be awesome :)
   * Special: X
   * Pause: Esc
   * Cheats:
-    * Invincibility: G
+    * Invincibility, 10x damage, and unlimited special: G
 
 ##Game Pad Controls:
   * Right:   Left analog stick right
