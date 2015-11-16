@@ -5,10 +5,11 @@ It will be awesome :)
 
 ##To play:
   1. Launch game
-  2. Click on Arcade (or use arrow keys and enter)
-  3. Select your character (press 'Kick' button)
+  2. Select game mode using arrow keys and `Enter` (or game pad controller 1)
+  3. Select your character (press 'Kick' button to lock in selection)
 
-##Controls:
+##Keyboard Controls:
+###Player 1
   * Right: Right Arrow
   * Left:    Left Arrow
   * Punch:   Control
@@ -20,7 +21,18 @@ It will be awesome :)
   * Cheats:
     * Invincibility, 10x damage, and unlimited special: G
 
+###Player 2
+  * Right: D
+  * Left:  A
+  * Punch: P
+  * Kick:  O
+  * Jump:  W
+  * Block: I
+  * Special: U
+  * Pause: Esc
+
 ##Game Pad Controls:
+###Player 1 and 2
   * Right:   Left analog stick right
   * Left:    Left analog stick left
   * Punch:   X
@@ -72,4 +84,4 @@ Creative Commons
 http://quietlounge.com/blog/release/red_hot_wok/  
 Creative Commons  
   
-Cannonball - Probably need replacement
+All art not specifically credited is Copyright 2015 by Benny Xiong and Sarah Baucom
