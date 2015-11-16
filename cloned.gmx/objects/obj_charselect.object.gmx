@@ -27,8 +27,12 @@
             <kind>1</kind>
             <string>with(global.controller_obj[0]) instance_change(obj_player_controller, true);
 
+left_char_obj = instance_create(173,512,obj_fighter);
+right_char_obj = instance_create(851,512,obj_fighter);
+
 if(global.mode=="arcade") {
     with(global.controller_obj[1]) instance_change(obj_ai_controller, true);
+    right_char_obj.visible = false;
 } else {
     with(global.controller_obj[1]) instance_change(obj_player_controller, true);
 }
@@ -43,8 +47,7 @@ characters[1]="wukong";
 characters[2]="panda";
 characters[3]="random";
 
-left_char_obj = instance_create(173,512,obj_fighter);
-right_char_obj = instance_create(851,512,obj_fighter);
+
 
 </string>
           </argument>
@@ -76,6 +79,10 @@ right_char_obj = instance_create(851,512,obj_fighter);
         if(p2_pick == "random") global.player2 = choose("jibbers", "wukong", "panda");
         script_room_select();
     }
+}
+
+if(keyboard_check_released(vk_escape)) {
+    room_goto(rm_mainMenu);
 }
 
 // Player 1
@@ -181,10 +188,11 @@ right_char_obj.image_xscale = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_stretched(spr_vs_jibbers, 0, 320, 192, 192, 192);
-draw_sprite_stretched(spr_vs_wukong, 0, 512, 192, 192, 192);
-draw_sprite_stretched(spr_vs_panda, 0, 320, 384, 192, 192);
-draw_sprite_stretched(spr_vs_cassandra, 0, 512, 384, 192, 192);
+            <string>draw_sprite_stretched(select_jibbers, 0, 320, 192, 192, 192);
+draw_sprite_stretched(select_wukong, 0, 512, 192, 192, 192);
+draw_sprite_stretched(select_panda, 0, 320, 384, 192, 192);
+draw_sprite_stretched(select_random, 0, 512, 384, 192, 192);
+script_draw_stroked_text("?", 608, 480, 1, c_aqua, c_teal, fa_center, fa_center, 2);
 
 var color = c_green;
 if(is_undefined(p1_pick)) color = c_red;

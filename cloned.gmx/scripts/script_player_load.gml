@@ -11,9 +11,9 @@ switch(fighter) {
     case "panda":
         with(player_obj) instance_change(obj_panda, true);
         break;
-    case "cassandra":
-        with(player_obj) instance_change(obj_cassandra, true);
-        break;
+//    case "cassandra":
+//        with(player_obj) instance_change(obj_cassandra, true);
+//        break;
     case "bahamut":
         with(player_obj) instance_change(obj_bahamut_human, true);
         break;

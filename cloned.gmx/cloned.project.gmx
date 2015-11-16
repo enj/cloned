@@ -105,6 +105,12 @@
     <sprite>sprites\spr_cannonball_explosion</sprite>
     <sprite>sprites\spr_full</sprite>
     <sprite>sprites\spr_panda_fist</sprite>
+    <sprites name="Character Sepect">
+      <sprite>sprites\select_jibbers</sprite>
+      <sprite>sprites\select_wukong</sprite>
+      <sprite>sprites\select_panda</sprite>
+      <sprite>sprites\select_random</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_jibbers</background>
@@ -113,6 +119,7 @@
     <background>background\fore_jibbers3</background>
     <background>background\fore_wukong</background>
     <background>background\back_wukong</background>
+    <background>background\back_charselect</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
