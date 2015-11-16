@@ -33,6 +33,7 @@
     <sprite>sprites\spr_empty</sprite>
     <sprites name="Jibbers">
       <sprite>sprites\spr_jibbers_standing</sprite>
+      <sprite>sprites\spr_jibbers_death</sprite>
       <sprite>sprites\spr_jibbers_special</sprite>
       <sprite>sprites\spr_jibbers_jumping</sprite>
       <sprite>sprites\spr_jibbers_block</sprite>

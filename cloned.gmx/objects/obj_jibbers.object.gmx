@@ -34,6 +34,7 @@ sprite_walking  = spr_jibbers_walking;
 sprite_blocking = spr_jibbers_block;
 sprite_special  = spr_jibbers_special;
 sprite_jumping  = spr_jibbers_jumping;
+sprite_death    = spr_jibbers_death;
 mask_punching   = mask_jibbers_punch;
 mask_kicking    = mask_jibbers_kick;
 sprite_index = sprite_standing;
