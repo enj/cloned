@@ -18,6 +18,11 @@ if(global.mode=="arcade") {
     global.controller_obj[1].fighter=undefined;
     if(ds_list_size(global.fighter_list) > 0) {
         global.player2=ds_list_find_value(global.fighter_list,0);
+        if(global.player2=="bahamut_transform") {
+            ds_list_delete(global.fighter_list,0);
+            room_goto(rm_bahamut_nofight);
+            exit;
+        }
         global.stage=ds_list_find_value(global.fighter_list,0);
         ds_list_delete(global.fighter_list,0);
         room_goto(rm_vs);

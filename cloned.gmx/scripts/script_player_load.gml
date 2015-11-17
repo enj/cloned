@@ -14,7 +14,7 @@ switch(fighter) {
     case "bahamut":
         with(player_obj) instance_change(obj_bahamut_human, true);
         break;
-//    case "bahamut2":
-//        with(player_obj) instance_change(obj_bahamut_dragon, true);
-//        break;
+    case "bahamut2":
+        with(player_obj) instance_change(obj_bahamut_dragon, true);
+        break;
 }

@@ -22,9 +22,9 @@ if(place_meeting(x,y,opponent)) {
 
             with(opponent) {
                 sprite_index=sprite_jumping;
-                vspeed=-20;
-                if(facing_right) hspeed=-10;
-                else hspeed=10;
+                vspeed=-10;
+                if(facing_right) hspeed=-15;
+                else hspeed=15;
                 jumping=true;
             }
         }

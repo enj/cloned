@@ -72,7 +72,7 @@ if(keyboard_check(vk_up) || gamepad_axis_value(controller, gp_axislv)&lt;-.8) {
     if(selected&gt;0) selected--;
     step=0;
 }
-if(keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(controller, gp_face1)) {
+if(keyboard_check_released(vk_enter) || gamepad_button_check_pressed(controller, gp_face1)) {
     if(options[selected]=="Continue") {
         global.pause = false;
         instance_destroy();

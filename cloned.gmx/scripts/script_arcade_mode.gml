@@ -9,7 +9,8 @@ ds_list_shuffle(global.fighter_list);
 
 ds_list_add(global.fighter_list, global.player1);
 ds_list_add(global.fighter_list, "bahamut");
-//ds_list_add(global.fighter_list, "bahamut2");
+ds_list_add(global.fighter_list, "bahamut_transform");
+ds_list_add(global.fighter_list, "bahamut2");
 
 script_room_select();
 

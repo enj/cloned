@@ -109,6 +109,7 @@
     </sprites>
     <sprites name="Vs">
       <sprite>sprites\spr_vs_jibbers</sprite>
+      <sprite>sprites\spr_vs_bahamut</sprite>
       <sprite>sprites\spr_vs_panda</sprite>
       <sprite>sprites\spr_vs_wukong</sprite>
     </sprites>
@@ -214,6 +215,8 @@
       <object>objects\obj_jibbers</object>
       <object>objects\obj_panda</object>
       <object>objects\obj_bahamut_human</object>
+      <object>objects\obj_bahamut_dragon</object>
+      <object>objects\obj_bahamut_transform</object>
       <object>objects\obj_wukong</object>
       <objects name="Specials">
         <object>objects\obj_special_jibbers</object>

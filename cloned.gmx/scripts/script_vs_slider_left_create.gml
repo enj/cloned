@@ -21,6 +21,10 @@ switch(player1) {
         sprite_index=spr_vs_bahamut;
         name="Professor#Bahamut";
         break;
+    case "bahamut2":
+        sprite_index=spr_vs_bahamut;
+        name="Doctor#Bahamut";
+        break;
 }
 image_xscale=scale;
 image_yscale=scale;
