@@ -96,5 +96,8 @@ Under the Creative Commons License
 http://soundbible.com/1794-Missle-Launch.html   
 Public Domain Usage License
 
-  
+"Auditorium, Classroom, Lecture" - ISDiva  
+https://pixabay.com/en/auditorium-classroom-lecture-572776/  
+CC0 Public Domain  
+
 All art not specifically credited is Copyright 2015 by Benny Xiong and Sarah Baucom
