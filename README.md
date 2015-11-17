@@ -1,5 +1,10 @@
 # cloned
  A Bit Parody [fighting] game
+ 
+ - Sarah Baucom
+ - Monis Khan
+ - Benny Xiong
+ - Jorge Ramos
 
 It will be awesome :)
 
