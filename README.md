@@ -81,7 +81,20 @@ http://famouswonders.com/lijiang-river-and-its-cruise/
 Creative Commons  
 
 "Firecrackers" - Red Hot Wok  
-http://quietlounge.com/blog/release/red_hot_wok/
+http://quietlounge.com/blog/release/red_hot_wok/   
 Creative Commons
+
+"Garden Relaxation Chinese Garden" - (username)ivabalk  
+https://pixabay.com/en/garden-relaxation-chinese-garden-730408/  
+Under CC0 Public Domain License  
+ 
+"Secrets of The School Yard" - Kevin MacLeod  
+http://incompetech.com/music/royalty-free/  
+Under the Creative Commons License  
+
+"Missile Launch" - Kibblesbob   
+http://soundbible.com/1794-Missle-Launch.html   
+Public Domain Usage License
+
   
 All art not specifically credited is Copyright 2015 by Benny Xiong and Sarah Baucom
