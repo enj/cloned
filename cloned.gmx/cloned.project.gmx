@@ -147,6 +147,7 @@
     <background>background\back_panda</background>
     <background>background\fore_panda</background>
     <background>background\back_win</background>
+    <background>background\back_main</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
