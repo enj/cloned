@@ -28,6 +28,7 @@
       <sound>sound\snd_jibbers_hit_3</sound>
       <sound>sound\snd_jibbers_hit_4</sound>
       <sound>sound\snd_jibbers_attack_1</sound>
+      <sound>sound\snd_missile</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -256,10 +257,10 @@
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_jibbers</room>
     <room>rooms\rm_panda</room>
-    <room>rooms\rm_cassandra</room>
     <room>rooms\rm_wukong</room>
     <room>rooms\rm_training</room>
     <room>rooms\rm_bahamut</room>
+    <room>rooms\rm_bahamut_nofight</room>
     <room>rooms\rm_vs</room>
   </rooms>
   <help>

@@ -51,15 +51,15 @@ kick_range=158;
 mask_offset=54;
 
 // Damages
-punch_damage=8;
-kick_damage=12;
-special_damage=2;
+punch_damage=24;
+kick_damage=16;
+special_damage=50;
 
 
 // Stats
 max_hp=300;
 hp=max_hp;
-max_mp=170
+max_mp=150
 mp = floor(max_mp / 2)
 
 </string>

@@ -58,7 +58,7 @@ special_damage=100;
 // Stats
 max_hp=240;
 hp=max_hp;
-max_mp = 150
+max_mp = 125
 mp = floor(max_mp / 2)
 
 
