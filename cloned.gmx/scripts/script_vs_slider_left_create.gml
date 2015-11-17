@@ -22,7 +22,7 @@ switch(player1) {
         name="Professor#Bahamut";
         break;
     case "bahamut2":
-        sprite_index=spr_vs_bahamut;
+        sprite_index=spr_vs_bahamut2;
         name="Doctor#Bahamut";
         break;
 }

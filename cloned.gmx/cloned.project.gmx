@@ -91,10 +91,21 @@
         <sprite>sprites\mask_bahamut_punch</sprite>
       </sprites>
       <sprites name="Bahamut_dragon">
-        <sprite>sprites\spr_bahamut_human_standing</sprite>
-        <sprite>sprites\spr_bahamut_human_walking</sprite>
-        <sprite>sprites\spr_bahamut_human_kick</sprite>
-        <sprite>sprites\spr_bahamut_human_punch</sprite>
+        <sprite>sprites\spr_bahamut2_standing</sprite>
+        <sprite>sprites\spr_bahamut2_special</sprite>
+        <sprite>sprites\spr_bahamut2_death</sprite>
+        <sprite>sprites\spr_bahamut2_walking</sprite>
+        <sprite>sprites\spr_bahamut2_block</sprite>
+        <sprite>sprites\spr_bahamut2_punch</sprite>
+        <sprite>sprites\spr_bahamut2_kick</sprite>
+        <sprite>sprites\spr_bahamut2_jumping</sprite>
+        <sprites name="Masks">
+          <sprite>sprites\mask_bahamut2_kick</sprite>
+          <sprite>sprites\mask_bahamut2_punch</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Transform">
+        <sprite>sprites\spr_bahamut_transform</sprite>
       </sprites>
     </sprites>
     <sprites name="Cassandra">
@@ -110,6 +121,7 @@
     <sprites name="Vs">
       <sprite>sprites\spr_vs_jibbers</sprite>
       <sprite>sprites\spr_vs_bahamut</sprite>
+      <sprite>sprites\spr_vs_bahamut2</sprite>
       <sprite>sprites\spr_vs_panda</sprite>
       <sprite>sprites\spr_vs_wukong</sprite>
     </sprites>
@@ -134,6 +146,7 @@
     <background>background\back_charselect</background>
     <background>background\back_panda</background>
     <background>background\fore_panda</background>
+    <background>background\back_win</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -232,6 +245,7 @@
       <object>objects\obj_referee</object>
       <object>objects\obj_ground</object>
       <object>objects\obj_view_follow</object>
+      <object>objects\obj_win_screen</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_room_speed</object>
@@ -265,6 +279,7 @@
     <room>rooms\rm_bahamut</room>
     <room>rooms\rm_bahamut_nofight</room>
     <room>rooms\rm_vs</room>
+    <room>rooms\rm_win</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

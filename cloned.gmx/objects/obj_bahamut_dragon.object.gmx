@@ -27,39 +27,39 @@
             <kind>1</kind>
             <string>event_inherited();
 fighter_name="Bahamut";
-sprite_standing = spr_bahamut_standing;
-sprite_punching = spr_bahamut_punch;
-sprite_kicking  = spr_bahamut_kick;
-sprite_walking  = spr_bahamut_walking;
-sprite_blocking = spr_bahamut_block;
-sprite_jumping  = spr_bahamut_standing;
-sprite_special  = spr_bahamut_special;
-sprite_death    = spr_bahamut_death;
-mask_punching   = mask_bahamut_punch;
-mask_kicking    = mask_bahamut_kick;
-mask_special    = mask_bahamut_special;
+dragon=true;
+sprite_standing = spr_bahamut2_standing;
+sprite_punching = spr_bahamut2_punch;
+sprite_kicking  = spr_bahamut2_kick;
+sprite_walking  = spr_bahamut2_walking;
+sprite_blocking = spr_bahamut2_block;
+sprite_jumping  = spr_bahamut2_jumping;
+sprite_special  = spr_bahamut2_special;
+sprite_death    = spr_bahamut2_death;
+mask_punching   = mask_bahamut2_punch;
+mask_kicking    = mask_bahamut2_kick;
 sprite_index = sprite_standing;
 
 // Sprite stuff
 image_xscale=1;
 image_yscale=1;
-player_speed = 8;
-base_image_speed=0.25;
+player_speed = 12;
+base_image_speed=0.125;
 image_speed = base_image_speed;
-punch_range=90;
-kick_range=158;
-mask_offset=54;
+punch_range=213;
+kick_range=226;
+mask_offset=57;
 
 // Damages
 punch_damage=24;
-kick_damage=16;
-special_damage=50;
+kick_damage=24;
+special_damage=2;
 
 
 // Stats
-max_hp=300;
+max_hp=400;
 hp=max_hp;
-max_mp=150
+max_mp=100
 mp = floor(max_mp / 2)
 
 </string>

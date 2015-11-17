@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -153,7 +153,7 @@ step++;
     var ox = opp_x;
     var oy = opp_y;
     with(fighter) {
-        if(collision_line(x,y-175,ox,oy-60,obj_fighter,false,true) == noone) {
+        if(collision_line(x-45,y-321,ox,oy-60,obj_fighter,false,true) == noone) {
             exit;
         }
     }
@@ -185,7 +185,7 @@ step++;
             <kind>1</kind>
             <string>if(is_undefined(fighter)) exit;
 draw_set_color(c_red);
-draw_line_width(fighter.x,fighter.y-175,opp_x,opp_y-60, 5);
+draw_line_width(fighter.x-45,fighter.y-321,opp_x,opp_y-60, 5);
 draw_set_color(c_black);
 
 </string>

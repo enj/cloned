@@ -27,7 +27,7 @@ if(global.mode=="arcade") {
         ds_list_delete(global.fighter_list,0);
         room_goto(rm_vs);
     } else {
-        game_restart();
+        room_goto(rm_win);
     }
     
     exit;

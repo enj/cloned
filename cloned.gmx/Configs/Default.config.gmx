@@ -204,7 +204,7 @@
     <option_mac_create_app_store>-1</option_mac_create_app_store>
     <option_mac_display_name>cloned</option_mac_display_name>
     <option_mac_enable_steam>0</option_mac_enable_steam>
-    <option_mac_fullscreen>0</option_mac_fullscreen>
+    <option_mac_fullscreen>-1</option_mac_fullscreen>
     <option_mac_icon_png>Configs\Default\mac\icon512.png</option_mac_icon_png>
     <option_mac_interpolate>-1</option_mac_interpolate>
     <option_mac_major_version>1</option_mac_major_version>
@@ -218,7 +218,7 @@
     <option_mac_splash_png>Configs\Default\mac\splash.png</option_mac_splash_png>
     <option_mac_steam_app_id>0</option_mac_steam_app_id>
     <option_mac_sync>0</option_mac_sync>
-    <option_mac_texture_page>2048</option_mac_texture_page>
+    <option_mac_texture_page>4096</option_mac_texture_page>
     <option_noborder>false</option_noborder>
     <option_nobuttons>false</option_nobuttons>
     <option_noscreensaver>true</option_noscreensaver>
