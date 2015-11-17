@@ -84,7 +84,7 @@ Creative Commons
 http://quietlounge.com/blog/release/red_hot_wok/   
 Creative Commons
 
-"Garden Relaxation Chinese Garden" - (username)ivabalk  
+"Garden Relaxation Chinese Garden" - ivabalk  
 https://pixabay.com/en/garden-relaxation-chinese-garden-730408/  
 Under CC0 Public Domain License  
  
